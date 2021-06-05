@@ -123,6 +123,87 @@ TinyServer/fast:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/build
 .PHONY : TinyServer/fast
 
+Logger.o: Logger.cpp.o
+
+.PHONY : Logger.o
+
+# target to build an object file
+Logger.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.cpp.o
+.PHONY : Logger.cpp.o
+
+Logger.i: Logger.cpp.i
+
+.PHONY : Logger.i
+
+# target to preprocess a source file
+Logger.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.cpp.i
+.PHONY : Logger.cpp.i
+
+Logger.s: Logger.cpp.s
+
+.PHONY : Logger.s
+
+# target to generate assembly for a file
+Logger.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.cpp.s
+.PHONY : Logger.cpp.s
+
+Logger.h.o: Logger.h.cpp.o
+
+.PHONY : Logger.h.o
+
+# target to build an object file
+Logger.h.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.h.cpp.o
+.PHONY : Logger.h.cpp.o
+
+Logger.h.i: Logger.h.cpp.i
+
+.PHONY : Logger.h.i
+
+# target to preprocess a source file
+Logger.h.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.h.cpp.i
+.PHONY : Logger.h.cpp.i
+
+Logger.h.s: Logger.h.cpp.s
+
+.PHONY : Logger.h.s
+
+# target to generate assembly for a file
+Logger.h.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.h.cpp.s
+.PHONY : Logger.h.cpp.s
+
+Timestamp.o: Timestamp.cpp.o
+
+.PHONY : Timestamp.o
+
+# target to build an object file
+Timestamp.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Timestamp.cpp.o
+.PHONY : Timestamp.cpp.o
+
+Timestamp.i: Timestamp.cpp.i
+
+.PHONY : Timestamp.i
+
+# target to preprocess a source file
+Timestamp.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Timestamp.cpp.i
+.PHONY : Timestamp.cpp.i
+
+Timestamp.s: Timestamp.cpp.s
+
+.PHONY : Timestamp.s
+
+# target to generate assembly for a file
+Timestamp.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Timestamp.cpp.s
+.PHONY : Timestamp.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -150,6 +231,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+noncopyable.o: noncopyable.cpp.o
+
+.PHONY : noncopyable.o
+
+# target to build an object file
+noncopyable.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/noncopyable.cpp.o
+.PHONY : noncopyable.cpp.o
+
+noncopyable.i: noncopyable.cpp.i
+
+.PHONY : noncopyable.i
+
+# target to preprocess a source file
+noncopyable.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/noncopyable.cpp.i
+.PHONY : noncopyable.cpp.i
+
+noncopyable.s: noncopyable.cpp.s
+
+.PHONY : noncopyable.s
+
+# target to generate assembly for a file
+noncopyable.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/noncopyable.cpp.s
+.PHONY : noncopyable.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +267,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... TinyServer"
+	@echo "... Logger.o"
+	@echo "... Logger.i"
+	@echo "... Logger.s"
+	@echo "... Logger.h.o"
+	@echo "... Logger.h.i"
+	@echo "... Logger.h.s"
+	@echo "... Timestamp.o"
+	@echo "... Timestamp.i"
+	@echo "... Timestamp.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... noncopyable.o"
+	@echo "... noncopyable.i"
+	@echo "... noncopyable.s"
 .PHONY : help
 
 

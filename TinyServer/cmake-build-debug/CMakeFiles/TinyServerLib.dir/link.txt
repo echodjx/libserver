@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/TinyServerLib.dir/main.cpp.o  -o TinyServerLib 

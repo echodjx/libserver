@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="TinyServer"/>
+		<Option title="TinyServerLib"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -37,11 +37,11 @@
 					<DistClean command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TinyServer">
-				<Option output="/tmp/tmp.7kS45xmAmN/lib/libTinyServer.so" prefix_auto="0" extension_auto="0"/>
+			<Target title="TinyServerLib">
+				<Option output="/tmp/tmp.7kS45xmAmN/cmake-build-debug/TinyServerLib" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/tmp/tmp.7kS45xmAmN/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="3"/>
+				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/include/c++/9"/>
@@ -53,17 +53,17 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/cmake-build-debug/Makefile&quot;  VERBOSE=1 TinyServer"/>
+					<Build command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/cmake-build-debug/Makefile&quot;  VERBOSE=1 TinyServerLib"/>
 					<CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TinyServer/fast">
-				<Option output="/tmp/tmp.7kS45xmAmN/lib/libTinyServer.so" prefix_auto="0" extension_auto="0"/>
+			<Target title="TinyServerLib/fast">
+				<Option output="/tmp/tmp.7kS45xmAmN/cmake-build-debug/TinyServerLib" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/tmp/tmp.7kS45xmAmN/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="3"/>
+				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/include/c++/9"/>
@@ -75,36 +75,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/cmake-build-debug/Makefile&quot;  VERBOSE=1 TinyServer/fast"/>
+					<Build command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/cmake-build-debug/Makefile&quot;  VERBOSE=1 TinyServerLib/fast"/>
 					<CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/tmp/tmp.7kS45xmAmN/Logger.cpp">
-			<Option target="TinyServer"/>
-		</Unit>
-		<Unit filename="/tmp/tmp.7kS45xmAmN/Logger.h">
-			<Option target="TinyServer"/>
-		</Unit>
-		<Unit filename="/tmp/tmp.7kS45xmAmN/Logger.h.cpp">
-			<Option target="TinyServer"/>
-		</Unit>
-		<Unit filename="/tmp/tmp.7kS45xmAmN/Timestamp.cpp">
-			<Option target="TinyServer"/>
-		</Unit>
-		<Unit filename="/tmp/tmp.7kS45xmAmN/Timestamp.h">
-			<Option target="TinyServer"/>
-		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/main.cpp">
-			<Option target="TinyServer"/>
-		</Unit>
-		<Unit filename="/tmp/tmp.7kS45xmAmN/noncopyable.cpp">
-			<Option target="TinyServer"/>
-		</Unit>
-		<Unit filename="/tmp/tmp.7kS45xmAmN/noncopyable.h">
-			<Option target="TinyServer"/>
+			<Option target="TinyServerLib"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

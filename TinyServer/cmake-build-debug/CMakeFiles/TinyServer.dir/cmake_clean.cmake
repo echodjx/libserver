@@ -1,7 +1,11 @@
 file(REMOVE_RECURSE
+  "../lib/libTinyServer.pdb"
+  "../lib/libTinyServer.so"
+  "CMakeFiles/TinyServer.dir/Logger.cpp.o"
+  "CMakeFiles/TinyServer.dir/Logger.h.cpp.o"
+  "CMakeFiles/TinyServer.dir/Timestamp.cpp.o"
   "CMakeFiles/TinyServer.dir/main.cpp.o"
-  "TinyServer"
-  "TinyServer.pdb"
+  "CMakeFiles/TinyServer.dir/noncopyable.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.
