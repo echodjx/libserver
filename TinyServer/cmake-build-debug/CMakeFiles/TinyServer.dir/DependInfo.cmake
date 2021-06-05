@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/tmp/tmp.7kS45xmAmN/InetAddress.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/InetAddress.cpp.o"
   "/tmp/tmp.7kS45xmAmN/Logger.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Logger.cpp.o"
   "/tmp/tmp.7kS45xmAmN/Logger.h.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Logger.h.cpp.o"
   "/tmp/tmp.7kS45xmAmN/Timestamp.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Timestamp.cpp.o"

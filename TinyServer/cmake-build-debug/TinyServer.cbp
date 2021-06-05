@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/InetAddress.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/InetAddress.h">
+			<Option target="TinyServer"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/Logger.cpp">
 			<Option target="TinyServer"/>
 		</Unit>

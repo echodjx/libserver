@@ -6,6 +6,34 @@
 
 #IncludeRegexTransform: 
 
+/tmp/tmp.7kS45xmAmN/Logger.cpp
+Logger.h
+/tmp/tmp.7kS45xmAmN/Logger.h
+Timestamp.h
+/tmp/tmp.7kS45xmAmN/Timestamp.h
+
+/tmp/tmp.7kS45xmAmN/Logger.h
+noncopyable.h
+/tmp/tmp.7kS45xmAmN/noncopyable.h
+string
+-
+iostream
+-
+
+/tmp/tmp.7kS45xmAmN/Logger.h.cpp
+
+/tmp/tmp.7kS45xmAmN/Timestamp.cpp
+Timestamp.h
+/tmp/tmp.7kS45xmAmN/Timestamp.h
+time.h
+-
+
+/tmp/tmp.7kS45xmAmN/Timestamp.h
+string
+-
+iostream
+-
+
 /tmp/tmp.7kS45xmAmN/main.cpp
 stdio.h
 -
@@ -27,4 +55,10 @@ sys/epoll.h
 -
 sys/errno.h
 -
+
+/tmp/tmp.7kS45xmAmN/noncopyable.cpp
+noncopyable.h
+/tmp/tmp.7kS45xmAmN/noncopyable.h
+
+/tmp/tmp.7kS45xmAmN/noncopyable.h
 
