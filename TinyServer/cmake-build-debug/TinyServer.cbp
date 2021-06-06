@@ -82,6 +82,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/Channel.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/Channel.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/EventLoop.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/EventLoop.h">
+			<Option target="TinyServer"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/InetAddress.cpp">
 			<Option target="TinyServer"/>
 		</Unit>
@@ -95,6 +107,12 @@
 			<Option target="TinyServer"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/Logger.h.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/TcpServer.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/TcpServer.h">
 			<Option target="TinyServer"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/Timestamp.cpp">

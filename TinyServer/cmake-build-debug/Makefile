@@ -123,6 +123,60 @@ TinyServer/fast:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/build
 .PHONY : TinyServer/fast
 
+Channel.o: Channel.cpp.o
+
+.PHONY : Channel.o
+
+# target to build an object file
+Channel.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Channel.cpp.o
+.PHONY : Channel.cpp.o
+
+Channel.i: Channel.cpp.i
+
+.PHONY : Channel.i
+
+# target to preprocess a source file
+Channel.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Channel.cpp.i
+.PHONY : Channel.cpp.i
+
+Channel.s: Channel.cpp.s
+
+.PHONY : Channel.s
+
+# target to generate assembly for a file
+Channel.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Channel.cpp.s
+.PHONY : Channel.cpp.s
+
+EventLoop.o: EventLoop.cpp.o
+
+.PHONY : EventLoop.o
+
+# target to build an object file
+EventLoop.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/EventLoop.cpp.o
+.PHONY : EventLoop.cpp.o
+
+EventLoop.i: EventLoop.cpp.i
+
+.PHONY : EventLoop.i
+
+# target to preprocess a source file
+EventLoop.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/EventLoop.cpp.i
+.PHONY : EventLoop.cpp.i
+
+EventLoop.s: EventLoop.cpp.s
+
+.PHONY : EventLoop.s
+
+# target to generate assembly for a file
+EventLoop.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/EventLoop.cpp.s
+.PHONY : EventLoop.cpp.s
+
 InetAddress.o: InetAddress.cpp.o
 
 .PHONY : InetAddress.o
@@ -203,6 +257,33 @@ Logger.h.s: Logger.h.cpp.s
 Logger.h.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.h.cpp.s
 .PHONY : Logger.h.cpp.s
+
+TcpServer.o: TcpServer.cpp.o
+
+.PHONY : TcpServer.o
+
+# target to build an object file
+TcpServer.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/TcpServer.cpp.o
+.PHONY : TcpServer.cpp.o
+
+TcpServer.i: TcpServer.cpp.i
+
+.PHONY : TcpServer.i
+
+# target to preprocess a source file
+TcpServer.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/TcpServer.cpp.i
+.PHONY : TcpServer.cpp.i
+
+TcpServer.s: TcpServer.cpp.s
+
+.PHONY : TcpServer.s
+
+# target to generate assembly for a file
+TcpServer.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/TcpServer.cpp.s
+.PHONY : TcpServer.cpp.s
 
 Timestamp.o: Timestamp.cpp.o
 
@@ -294,6 +375,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... TinyServer"
+	@echo "... Channel.o"
+	@echo "... Channel.i"
+	@echo "... Channel.s"
+	@echo "... EventLoop.o"
+	@echo "... EventLoop.i"
+	@echo "... EventLoop.s"
 	@echo "... InetAddress.o"
 	@echo "... InetAddress.i"
 	@echo "... InetAddress.s"
@@ -303,6 +390,9 @@ help:
 	@echo "... Logger.h.o"
 	@echo "... Logger.h.i"
 	@echo "... Logger.h.s"
+	@echo "... TcpServer.o"
+	@echo "... TcpServer.i"
+	@echo "... TcpServer.s"
 	@echo "... Timestamp.o"
 	@echo "... Timestamp.i"
 	@echo "... Timestamp.s"
