@@ -150,6 +150,60 @@ Channel.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Channel.cpp.s
 .PHONY : Channel.cpp.s
 
+DefaultPoller.o: DefaultPoller.cpp.o
+
+.PHONY : DefaultPoller.o
+
+# target to build an object file
+DefaultPoller.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/DefaultPoller.cpp.o
+.PHONY : DefaultPoller.cpp.o
+
+DefaultPoller.i: DefaultPoller.cpp.i
+
+.PHONY : DefaultPoller.i
+
+# target to preprocess a source file
+DefaultPoller.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/DefaultPoller.cpp.i
+.PHONY : DefaultPoller.cpp.i
+
+DefaultPoller.s: DefaultPoller.cpp.s
+
+.PHONY : DefaultPoller.s
+
+# target to generate assembly for a file
+DefaultPoller.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/DefaultPoller.cpp.s
+.PHONY : DefaultPoller.cpp.s
+
+EPollPoller.o: EPollPoller.cpp.o
+
+.PHONY : EPollPoller.o
+
+# target to build an object file
+EPollPoller.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/EPollPoller.cpp.o
+.PHONY : EPollPoller.cpp.o
+
+EPollPoller.i: EPollPoller.cpp.i
+
+.PHONY : EPollPoller.i
+
+# target to preprocess a source file
+EPollPoller.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/EPollPoller.cpp.i
+.PHONY : EPollPoller.cpp.i
+
+EPollPoller.s: EPollPoller.cpp.s
+
+.PHONY : EPollPoller.s
+
+# target to generate assembly for a file
+EPollPoller.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/EPollPoller.cpp.s
+.PHONY : EPollPoller.cpp.s
+
 EventLoop.o: EventLoop.cpp.o
 
 .PHONY : EventLoop.o
@@ -257,6 +311,33 @@ Logger.h.s: Logger.h.cpp.s
 Logger.h.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.h.cpp.s
 .PHONY : Logger.h.cpp.s
+
+Poller.o: Poller.cpp.o
+
+.PHONY : Poller.o
+
+# target to build an object file
+Poller.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Poller.cpp.o
+.PHONY : Poller.cpp.o
+
+Poller.i: Poller.cpp.i
+
+.PHONY : Poller.i
+
+# target to preprocess a source file
+Poller.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Poller.cpp.i
+.PHONY : Poller.cpp.i
+
+Poller.s: Poller.cpp.s
+
+.PHONY : Poller.s
+
+# target to generate assembly for a file
+Poller.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Poller.cpp.s
+.PHONY : Poller.cpp.s
 
 TcpServer.o: TcpServer.cpp.o
 
@@ -378,6 +459,12 @@ help:
 	@echo "... Channel.o"
 	@echo "... Channel.i"
 	@echo "... Channel.s"
+	@echo "... DefaultPoller.o"
+	@echo "... DefaultPoller.i"
+	@echo "... DefaultPoller.s"
+	@echo "... EPollPoller.o"
+	@echo "... EPollPoller.i"
+	@echo "... EPollPoller.s"
 	@echo "... EventLoop.o"
 	@echo "... EventLoop.i"
 	@echo "... EventLoop.s"
@@ -390,6 +477,9 @@ help:
 	@echo "... Logger.h.o"
 	@echo "... Logger.h.i"
 	@echo "... Logger.h.s"
+	@echo "... Poller.o"
+	@echo "... Poller.i"
+	@echo "... Poller.s"
 	@echo "... TcpServer.o"
 	@echo "... TcpServer.i"
 	@echo "... TcpServer.s"

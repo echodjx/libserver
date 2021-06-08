@@ -6,41 +6,42 @@
 #define LOG_INFO(logmsgFormat, ...) \
     do \
     { \
-        Loffer &logger =Logger::instance(); \
-        logger.setLogLevel(INFO);   \
-        char buf[1024] = {0};       \
-        snprintf(buf, 1024, logmsgFormat , ##__VA_ARGS__); \
-        logger.log(buf);\
-    }while(0)
-#define LOG_ERROPR(logmsgFormat, ...) \
+        Logger &logger = Logger::instance(); \
+        logger.setLogLevel(INFO); \
+        char buf[1024] = {0}; \
+        snprintf(buf, 1024, logmsgFormat, ##__VA_ARGS__); \
+        logger.log(buf); \
+    } while(0)
+#define LOG_ERROR(logmsgFormat, ...) \
     do \
     { \
-        Loffer &logger =Logger::instance(); \
-        logger.setLogLevel(ERROPR);   \
-        char buf[1024] = {0};       \
-        snprintf(buf, 1024, logmsgFormat , ##__VA_ARGS__); \
-        logger.log(buf);\
-    }while(0)
+        Logger &logger = Logger::instance(); \
+        logger.setLogLevel(ERROR); \
+        char buf[1024] = {0}; \
+        snprintf(buf, 1024, logmsgFormat, ##__VA_ARGS__); \
+        logger.log(buf); \
+    } while(0)
 #define LOG_FATAL(logmsgFormat, ...) \
     do \
     { \
-        Loffer &logger =Logger::instance(); \
-        logger.setLogLevel(FATAL);   \
-        char buf[1024] = {0};       \
-        snprintf(buf, 1024, logmsgFormat , ##__VA_ARGS__); \
-        logger.log(buf);\
-    }while(0)
-//暂时不打印DEBUG的信息
+        Logger &logger = Logger::instance(); \
+        logger.setLogLevel(FATAL); \
+        char buf[1024] = {0}; \
+        snprintf(buf, 1024, logmsgFormat, ##__VA_ARGS__); \
+        logger.log(buf); \
+        exit(-1); \
+    } while(0)
+
 #ifdef MUDEBUG
 #define LOG_DEBUG(logmsgFormat, ...) \
     do \
     { \
-        Loffer &logger =Logger::instance(); \
-        logger.setLogLevel(DEBUG);   \
-        char buf[1024] = {0};       \
-        snprintf(buf, 1024, logmsgFormat , ##__VA_ARGS__); \
-        logger.log(buf);\
-    }while(0)
+        Logger &logger = Logger::instance(); \
+        logger.setLogLevel(DEBUG); \
+        char buf[1024] = {0}; \
+        snprintf(buf, 1024, logmsgFormat, ##__VA_ARGS__); \
+        logger.log(buf); \
+    } while(0)
 #else
 #define LOG_DEBUG(logmsgFormat, ...)
 #endif

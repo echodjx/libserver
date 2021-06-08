@@ -5,10 +5,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/tmp/tmp.7kS45xmAmN/Channel.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Channel.cpp.o"
+  "/tmp/tmp.7kS45xmAmN/DefaultPoller.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/DefaultPoller.cpp.o"
+  "/tmp/tmp.7kS45xmAmN/EPollPoller.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/EPollPoller.cpp.o"
   "/tmp/tmp.7kS45xmAmN/EventLoop.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/EventLoop.cpp.o"
   "/tmp/tmp.7kS45xmAmN/InetAddress.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/InetAddress.cpp.o"
   "/tmp/tmp.7kS45xmAmN/Logger.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Logger.cpp.o"
   "/tmp/tmp.7kS45xmAmN/Logger.h.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Logger.h.cpp.o"
+  "/tmp/tmp.7kS45xmAmN/Poller.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Poller.cpp.o"
   "/tmp/tmp.7kS45xmAmN/TcpServer.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/TcpServer.cpp.o"
   "/tmp/tmp.7kS45xmAmN/Timestamp.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Timestamp.cpp.o"
   "/tmp/tmp.7kS45xmAmN/main.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/main.cpp.o"

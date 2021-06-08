@@ -3,7 +3,17 @@
 
 CMakeFiles/TinyServer.dir/Channel.cpp.o: ../Channel.cpp
 CMakeFiles/TinyServer.dir/Channel.cpp.o: ../Channel.h
+CMakeFiles/TinyServer.dir/Channel.cpp.o: ../Logger.h
+CMakeFiles/TinyServer.dir/Channel.cpp.o: ../Timestamp.h
 CMakeFiles/TinyServer.dir/Channel.cpp.o: ../noncopyable.h
+
+CMakeFiles/TinyServer.dir/DefaultPoller.cpp.o: ../DefaultPoller.cpp
+CMakeFiles/TinyServer.dir/DefaultPoller.cpp.o: ../Poller.h
+CMakeFiles/TinyServer.dir/DefaultPoller.cpp.o: ../Timestamp.h
+CMakeFiles/TinyServer.dir/DefaultPoller.cpp.o: ../noncopyable.h
+
+CMakeFiles/TinyServer.dir/EPollPoller.cpp.o: ../EPollPoller.cpp
+CMakeFiles/TinyServer.dir/EPollPoller.cpp.o: ../EPollPoller.h
 
 CMakeFiles/TinyServer.dir/EventLoop.cpp.o: ../EventLoop.cpp
 CMakeFiles/TinyServer.dir/EventLoop.cpp.o: ../EventLoop.h
@@ -17,6 +27,12 @@ CMakeFiles/TinyServer.dir/Logger.cpp.o: ../Timestamp.h
 CMakeFiles/TinyServer.dir/Logger.cpp.o: ../noncopyable.h
 
 CMakeFiles/TinyServer.dir/Logger.h.cpp.o: ../Logger.h.cpp
+
+CMakeFiles/TinyServer.dir/Poller.cpp.o: ../Channel.h
+CMakeFiles/TinyServer.dir/Poller.cpp.o: ../Poller.cpp
+CMakeFiles/TinyServer.dir/Poller.cpp.o: ../Poller.h
+CMakeFiles/TinyServer.dir/Poller.cpp.o: ../Timestamp.h
+CMakeFiles/TinyServer.dir/Poller.cpp.o: ../noncopyable.h
 
 CMakeFiles/TinyServer.dir/TcpServer.cpp.o: ../TcpServer.cpp
 CMakeFiles/TinyServer.dir/TcpServer.cpp.o: ../TcpServer.h

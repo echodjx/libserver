@@ -6,13 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/tmp/tmp.7kS45xmAmN/Channel.cpp
-Channel.h
-/tmp/tmp.7kS45xmAmN/Channel.h
+/tmp/tmp.7kS45xmAmN/EPollPoller.cpp
+EPollPoller.h
+/tmp/tmp.7kS45xmAmN/EPollPoller.h
 
-/tmp/tmp.7kS45xmAmN/Channel.h
-noncopyable.h
-/tmp/tmp.7kS45xmAmN/noncopyable.h
-
-/tmp/tmp.7kS45xmAmN/noncopyable.h
+/tmp/tmp.7kS45xmAmN/EPollPoller.h
 
