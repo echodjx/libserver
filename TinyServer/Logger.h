@@ -64,5 +64,5 @@ public:
     void log(std::string msg);
 private:
     int logLevel_;
-    Logger(){}
+    Logger(){};
 };

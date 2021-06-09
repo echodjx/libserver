@@ -11,7 +11,8 @@ Channel::Channel(EvenLopp *loop, int fd)
     , events_(0)
     , revents_(0)
     , index_(-1)
-    , tied_(false){}
+    , tied_(false) {
+}
 
 Channel::~Channel() {
 }

@@ -3,9 +3,10 @@
 // 无法进行拷贝构造和赋值操作
 class  noncopyable {
 public:
+    //delete直接禁用拷贝构造函数
     noncopyable(const  noncopyable&) = delete;
     noncopyable& operator=(const  noncopyable&) = delete;
 protected:
-    noncopyable() = default;
+    noncopyable() = default;//显式指定缺省函数
     ~noncopyable() = default;
 };
