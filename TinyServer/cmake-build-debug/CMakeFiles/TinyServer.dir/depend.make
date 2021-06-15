@@ -12,9 +12,6 @@ CMakeFiles/TinyServer.dir/Channel.cpp.o: ../noncopyable.h
 CMakeFiles/TinyServer.dir/CurrentThread.cpp.o: ../CurrentThread.cpp
 CMakeFiles/TinyServer.dir/CurrentThread.cpp.o: ../CurrentThread.h
 
-CMakeFiles/TinyServer.dir/Currentthread.cpp.o: ../Currentthread.cpp
-CMakeFiles/TinyServer.dir/Currentthread.cpp.o: ../Currentthread.h
-
 CMakeFiles/TinyServer.dir/DefaultPoller.cpp.o: ../DefaultPoller.cpp
 CMakeFiles/TinyServer.dir/DefaultPoller.cpp.o: ../EPollPoller.h
 CMakeFiles/TinyServer.dir/DefaultPoller.cpp.o: ../Poller.h
@@ -47,8 +44,6 @@ CMakeFiles/TinyServer.dir/Logger.cpp.o: ../Logger.cpp
 CMakeFiles/TinyServer.dir/Logger.cpp.o: ../Logger.h
 CMakeFiles/TinyServer.dir/Logger.cpp.o: ../Timestamp.h
 
-CMakeFiles/TinyServer.dir/Logger.h.cpp.o: ../Logger.h.cpp
-
 CMakeFiles/TinyServer.dir/Poller.cpp.o: ../Channel.h
 CMakeFiles/TinyServer.dir/Poller.cpp.o: ../CurrentThread.h
 CMakeFiles/TinyServer.dir/Poller.cpp.o: ../EventLoop.h
@@ -67,9 +62,4 @@ CMakeFiles/TinyServer.dir/Thread.cpp.o: ../noncopyable.h
 
 CMakeFiles/TinyServer.dir/Timestamp.cpp.o: ../Timestamp.cpp
 CMakeFiles/TinyServer.dir/Timestamp.cpp.o: ../Timestamp.h
-
-CMakeFiles/TinyServer.dir/main.cpp.o: ../main.cpp
-
-CMakeFiles/TinyServer.dir/noncopyable.cpp.o: ../noncopyable.cpp
-CMakeFiles/TinyServer.dir/noncopyable.cpp.o: ../noncopyable.h
 

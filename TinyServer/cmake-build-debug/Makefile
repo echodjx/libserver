@@ -177,33 +177,6 @@ CurrentThread.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/CurrentThread.cpp.s
 .PHONY : CurrentThread.cpp.s
 
-Currentthread.o: Currentthread.cpp.o
-
-.PHONY : Currentthread.o
-
-# target to build an object file
-Currentthread.cpp.o:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Currentthread.cpp.o
-.PHONY : Currentthread.cpp.o
-
-Currentthread.i: Currentthread.cpp.i
-
-.PHONY : Currentthread.i
-
-# target to preprocess a source file
-Currentthread.cpp.i:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Currentthread.cpp.i
-.PHONY : Currentthread.cpp.i
-
-Currentthread.s: Currentthread.cpp.s
-
-.PHONY : Currentthread.s
-
-# target to generate assembly for a file
-Currentthread.cpp.s:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Currentthread.cpp.s
-.PHONY : Currentthread.cpp.s
-
 DefaultPoller.o: DefaultPoller.cpp.o
 
 .PHONY : DefaultPoller.o
@@ -339,33 +312,6 @@ Logger.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.cpp.s
 .PHONY : Logger.cpp.s
 
-Logger.h.o: Logger.h.cpp.o
-
-.PHONY : Logger.h.o
-
-# target to build an object file
-Logger.h.cpp.o:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.h.cpp.o
-.PHONY : Logger.h.cpp.o
-
-Logger.h.i: Logger.h.cpp.i
-
-.PHONY : Logger.h.i
-
-# target to preprocess a source file
-Logger.h.cpp.i:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.h.cpp.i
-.PHONY : Logger.h.cpp.i
-
-Logger.h.s: Logger.h.cpp.s
-
-.PHONY : Logger.h.s
-
-# target to generate assembly for a file
-Logger.h.cpp.s:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.h.cpp.s
-.PHONY : Logger.h.cpp.s
-
 Poller.o: Poller.cpp.o
 
 .PHONY : Poller.o
@@ -474,60 +420,6 @@ Timestamp.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Timestamp.cpp.s
 .PHONY : Timestamp.cpp.s
 
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-noncopyable.o: noncopyable.cpp.o
-
-.PHONY : noncopyable.o
-
-# target to build an object file
-noncopyable.cpp.o:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/noncopyable.cpp.o
-.PHONY : noncopyable.cpp.o
-
-noncopyable.i: noncopyable.cpp.i
-
-.PHONY : noncopyable.i
-
-# target to preprocess a source file
-noncopyable.cpp.i:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/noncopyable.cpp.i
-.PHONY : noncopyable.cpp.i
-
-noncopyable.s: noncopyable.cpp.s
-
-.PHONY : noncopyable.s
-
-# target to generate assembly for a file
-noncopyable.cpp.s:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/noncopyable.cpp.s
-.PHONY : noncopyable.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -543,9 +435,6 @@ help:
 	@echo "... CurrentThread.o"
 	@echo "... CurrentThread.i"
 	@echo "... CurrentThread.s"
-	@echo "... Currentthread.o"
-	@echo "... Currentthread.i"
-	@echo "... Currentthread.s"
 	@echo "... DefaultPoller.o"
 	@echo "... DefaultPoller.i"
 	@echo "... DefaultPoller.s"
@@ -561,9 +450,6 @@ help:
 	@echo "... Logger.o"
 	@echo "... Logger.i"
 	@echo "... Logger.s"
-	@echo "... Logger.h.o"
-	@echo "... Logger.h.i"
-	@echo "... Logger.h.s"
 	@echo "... Poller.o"
 	@echo "... Poller.i"
 	@echo "... Poller.s"
@@ -576,12 +462,6 @@ help:
 	@echo "... Timestamp.o"
 	@echo "... Timestamp.i"
 	@echo "... Timestamp.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... noncopyable.o"
-	@echo "... noncopyable.i"
-	@echo "... noncopyable.s"
 .PHONY : help
 
 

@@ -6,13 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/tmp/tmp.7kS45xmAmN/CurrentThread.cpp
-CurrentThread.h
-/tmp/tmp.7kS45xmAmN/CurrentThread.h
-
-/tmp/tmp.7kS45xmAmN/CurrentThread.h
-unistd.h
+/tmp/tmp.7kS45xmAmN/InetAddress.cpp
+InetAddress.h
+/tmp/tmp.7kS45xmAmN/InetAddress.h
+strings.h
 -
-sys/syscall.h
+cstring
+-
+
+/tmp/tmp.7kS45xmAmN/InetAddress.h
+arpa/inet.h
+-
+netinet/in.h
+-
+string
 -
 

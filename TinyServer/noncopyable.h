@@ -1,3 +1,6 @@
+//
+// Created by echo-djx on 2021/6/3.
+//
 #pragma once
 // noncopyable被继承后，派生类对象可以正常的构造和析构
 // 无法进行拷贝构造和赋值操作
