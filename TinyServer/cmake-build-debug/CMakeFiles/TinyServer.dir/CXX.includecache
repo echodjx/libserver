@@ -6,19 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/tmp/tmp.7kS45xmAmN/InetAddress.cpp
-InetAddress.h
-/tmp/tmp.7kS45xmAmN/InetAddress.h
-strings.h
--
-cstring
--
-
-/tmp/tmp.7kS45xmAmN/InetAddress.h
-arpa/inet.h
--
-netinet/in.h
--
-string
--
-

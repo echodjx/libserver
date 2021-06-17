@@ -123,6 +123,33 @@ TinyServer/fast:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/build
 .PHONY : TinyServer/fast
 
+Acceptor.o: Acceptor.cpp.o
+
+.PHONY : Acceptor.o
+
+# target to build an object file
+Acceptor.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Acceptor.cpp.o
+.PHONY : Acceptor.cpp.o
+
+Acceptor.i: Acceptor.cpp.i
+
+.PHONY : Acceptor.i
+
+# target to preprocess a source file
+Acceptor.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Acceptor.cpp.i
+.PHONY : Acceptor.cpp.i
+
+Acceptor.s: Acceptor.cpp.s
+
+.PHONY : Acceptor.s
+
+# target to generate assembly for a file
+Acceptor.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Acceptor.cpp.s
+.PHONY : Acceptor.cpp.s
+
 Channel.o: Channel.cpp.o
 
 .PHONY : Channel.o
@@ -258,6 +285,60 @@ EventLoop.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/EventLoop.cpp.s
 .PHONY : EventLoop.cpp.s
 
+EventLoopThread.o: EventLoopThread.cpp.o
+
+.PHONY : EventLoopThread.o
+
+# target to build an object file
+EventLoopThread.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/EventLoopThread.cpp.o
+.PHONY : EventLoopThread.cpp.o
+
+EventLoopThread.i: EventLoopThread.cpp.i
+
+.PHONY : EventLoopThread.i
+
+# target to preprocess a source file
+EventLoopThread.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/EventLoopThread.cpp.i
+.PHONY : EventLoopThread.cpp.i
+
+EventLoopThread.s: EventLoopThread.cpp.s
+
+.PHONY : EventLoopThread.s
+
+# target to generate assembly for a file
+EventLoopThread.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/EventLoopThread.cpp.s
+.PHONY : EventLoopThread.cpp.s
+
+EventLoopThreadPool.o: EventLoopThreadPool.cpp.o
+
+.PHONY : EventLoopThreadPool.o
+
+# target to build an object file
+EventLoopThreadPool.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/EventLoopThreadPool.cpp.o
+.PHONY : EventLoopThreadPool.cpp.o
+
+EventLoopThreadPool.i: EventLoopThreadPool.cpp.i
+
+.PHONY : EventLoopThreadPool.i
+
+# target to preprocess a source file
+EventLoopThreadPool.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/EventLoopThreadPool.cpp.i
+.PHONY : EventLoopThreadPool.cpp.i
+
+EventLoopThreadPool.s: EventLoopThreadPool.cpp.s
+
+.PHONY : EventLoopThreadPool.s
+
+# target to generate assembly for a file
+EventLoopThreadPool.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/EventLoopThreadPool.cpp.s
+.PHONY : EventLoopThreadPool.cpp.s
+
 InetAddress.o: InetAddress.cpp.o
 
 .PHONY : InetAddress.o
@@ -312,6 +393,33 @@ Logger.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.cpp.s
 .PHONY : Logger.cpp.s
 
+Logger.h.o: Logger.h.cpp.o
+
+.PHONY : Logger.h.o
+
+# target to build an object file
+Logger.h.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.h.cpp.o
+.PHONY : Logger.h.cpp.o
+
+Logger.h.i: Logger.h.cpp.i
+
+.PHONY : Logger.h.i
+
+# target to preprocess a source file
+Logger.h.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.h.cpp.i
+.PHONY : Logger.h.cpp.i
+
+Logger.h.s: Logger.h.cpp.s
+
+.PHONY : Logger.h.s
+
+# target to generate assembly for a file
+Logger.h.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.h.cpp.s
+.PHONY : Logger.h.cpp.s
+
 Poller.o: Poller.cpp.o
 
 .PHONY : Poller.o
@@ -338,6 +446,33 @@ Poller.s: Poller.cpp.s
 Poller.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Poller.cpp.s
 .PHONY : Poller.cpp.s
+
+Socket.o: Socket.cpp.o
+
+.PHONY : Socket.o
+
+# target to build an object file
+Socket.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Socket.cpp.o
+.PHONY : Socket.cpp.o
+
+Socket.i: Socket.cpp.i
+
+.PHONY : Socket.i
+
+# target to preprocess a source file
+Socket.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Socket.cpp.i
+.PHONY : Socket.cpp.i
+
+Socket.s: Socket.cpp.s
+
+.PHONY : Socket.s
+
+# target to generate assembly for a file
+Socket.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Socket.cpp.s
+.PHONY : Socket.cpp.s
 
 TcpServer.o: TcpServer.cpp.o
 
@@ -420,6 +555,33 @@ Timestamp.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Timestamp.cpp.s
 .PHONY : Timestamp.cpp.s
 
+noncopyable.o: noncopyable.cpp.o
+
+.PHONY : noncopyable.o
+
+# target to build an object file
+noncopyable.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/noncopyable.cpp.o
+.PHONY : noncopyable.cpp.o
+
+noncopyable.i: noncopyable.cpp.i
+
+.PHONY : noncopyable.i
+
+# target to preprocess a source file
+noncopyable.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/noncopyable.cpp.i
+.PHONY : noncopyable.cpp.i
+
+noncopyable.s: noncopyable.cpp.s
+
+.PHONY : noncopyable.s
+
+# target to generate assembly for a file
+noncopyable.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/noncopyable.cpp.s
+.PHONY : noncopyable.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -429,6 +591,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... TinyServer"
+	@echo "... Acceptor.o"
+	@echo "... Acceptor.i"
+	@echo "... Acceptor.s"
 	@echo "... Channel.o"
 	@echo "... Channel.i"
 	@echo "... Channel.s"
@@ -444,15 +609,27 @@ help:
 	@echo "... EventLoop.o"
 	@echo "... EventLoop.i"
 	@echo "... EventLoop.s"
+	@echo "... EventLoopThread.o"
+	@echo "... EventLoopThread.i"
+	@echo "... EventLoopThread.s"
+	@echo "... EventLoopThreadPool.o"
+	@echo "... EventLoopThreadPool.i"
+	@echo "... EventLoopThreadPool.s"
 	@echo "... InetAddress.o"
 	@echo "... InetAddress.i"
 	@echo "... InetAddress.s"
 	@echo "... Logger.o"
 	@echo "... Logger.i"
 	@echo "... Logger.s"
+	@echo "... Logger.h.o"
+	@echo "... Logger.h.i"
+	@echo "... Logger.h.s"
 	@echo "... Poller.o"
 	@echo "... Poller.i"
 	@echo "... Poller.s"
+	@echo "... Socket.o"
+	@echo "... Socket.i"
+	@echo "... Socket.s"
 	@echo "... TcpServer.o"
 	@echo "... TcpServer.i"
 	@echo "... TcpServer.s"
@@ -462,6 +639,9 @@ help:
 	@echo "... Timestamp.o"
 	@echo "... Timestamp.i"
 	@echo "... Timestamp.s"
+	@echo "... noncopyable.o"
+	@echo "... noncopyable.i"
+	@echo "... noncopyable.s"
 .PHONY : help
 
 

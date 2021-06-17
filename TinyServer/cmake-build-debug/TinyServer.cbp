@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/Acceptor.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/Acceptor.h">
+			<Option target="TinyServer"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/Channel.cpp">
 			<Option target="TinyServer"/>
 		</Unit>
@@ -109,6 +115,18 @@
 		<Unit filename="/tmp/tmp.7kS45xmAmN/EventLoop.h">
 			<Option target="TinyServer"/>
 		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/EventLoopThread.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/EventLoopThread.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/EventLoopThreadPool.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/EventLoopThreadPool.h">
+			<Option target="TinyServer"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/InetAddress.cpp">
 			<Option target="TinyServer"/>
 		</Unit>
@@ -121,10 +139,19 @@
 		<Unit filename="/tmp/tmp.7kS45xmAmN/Logger.h">
 			<Option target="TinyServer"/>
 		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/Logger.h.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/Poller.cpp">
 			<Option target="TinyServer"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/Poller.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/Socket.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/Socket.h">
 			<Option target="TinyServer"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/TcpServer.cpp">
@@ -143,6 +170,9 @@
 			<Option target="TinyServer"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/Timestamp.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/noncopyable.cpp">
 			<Option target="TinyServer"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/noncopyable.h">

@@ -49,4 +49,5 @@ std::vector<EventLoop*> EventLoopThreadPool::getAllLoops() {
     else {
         loops_;
     }
+    return std::vector<EventLoop*>{0};
 }
