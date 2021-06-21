@@ -11,6 +11,13 @@ CMakeFiles/TinyServer.dir/Acceptor.cpp.o: ../Socket.h
 CMakeFiles/TinyServer.dir/Acceptor.cpp.o: ../Timestamp.h
 CMakeFiles/TinyServer.dir/Acceptor.cpp.o: ../noncopyable.h
 
+CMakeFiles/TinyServer.dir/Buffer.cpp.o: ../Buffer.cpp
+CMakeFiles/TinyServer.dir/Buffer.cpp.o: ../Buffer.h
+
+CMakeFiles/TinyServer.dir/Callbacks.cpp.o: ../Callbacks.cpp
+CMakeFiles/TinyServer.dir/Callbacks.cpp.o: ../Callbacks.h
+
+
 CMakeFiles/TinyServer.dir/Channel.cpp.o: ../Channel.cpp
 CMakeFiles/TinyServer.dir/Channel.cpp.o: ../Channel.h
 CMakeFiles/TinyServer.dir/Channel.cpp.o: ../EventLoop.h
@@ -64,7 +71,6 @@ CMakeFiles/TinyServer.dir/Logger.cpp.o: ../Logger.cpp
 CMakeFiles/TinyServer.dir/Logger.cpp.o: ../Logger.h
 CMakeFiles/TinyServer.dir/Logger.cpp.o: ../Timestamp.h
 
-
 CMakeFiles/TinyServer.dir/Poller.cpp.o: ../Channel.h
 CMakeFiles/TinyServer.dir/Poller.cpp.o: ../EventLoop.h
 CMakeFiles/TinyServer.dir/Poller.cpp.o: ../Poller.cpp
@@ -78,8 +84,22 @@ CMakeFiles/TinyServer.dir/Socket.cpp.o: ../Socket.cpp
 CMakeFiles/TinyServer.dir/Socket.cpp.o: ../Socket.h
 CMakeFiles/TinyServer.dir/Socket.cpp.o: ../noncopyable.h
 
+CMakeFiles/TinyServer.dir/TcpConnection.cpp.o: ../TcpConnection.cpp
+CMakeFiles/TinyServer.dir/TcpConnection.cpp.o: ../TcpConnection.h
+
+CMakeFiles/TinyServer.dir/TcpServer.cpp.o: ../Acceptor.h
+CMakeFiles/TinyServer.dir/TcpServer.cpp.o: ../Callbacks.h
+CMakeFiles/TinyServer.dir/TcpServer.cpp.o: ../Channel.h
+CMakeFiles/TinyServer.dir/TcpServer.cpp.o: ../CurrentThread.h
+CMakeFiles/TinyServer.dir/TcpServer.cpp.o: ../EventLoop.h
+CMakeFiles/TinyServer.dir/TcpServer.cpp.o: ../EventLoopThreadPool.h
+CMakeFiles/TinyServer.dir/TcpServer.cpp.o: ../InetAddress.h
+CMakeFiles/TinyServer.dir/TcpServer.cpp.o: ../Logger.h
+CMakeFiles/TinyServer.dir/TcpServer.cpp.o: ../Socket.h
 CMakeFiles/TinyServer.dir/TcpServer.cpp.o: ../TcpServer.cpp
 CMakeFiles/TinyServer.dir/TcpServer.cpp.o: ../TcpServer.h
+CMakeFiles/TinyServer.dir/TcpServer.cpp.o: ../Timestamp.h
+CMakeFiles/TinyServer.dir/TcpServer.cpp.o: ../noncopyable.h
 
 CMakeFiles/TinyServer.dir/Thread.cpp.o: ../Thread.cpp
 CMakeFiles/TinyServer.dir/Thread.cpp.o: ../Thread.h
@@ -88,6 +108,4 @@ CMakeFiles/TinyServer.dir/Thread.cpp.o: ../noncopyable.h
 CMakeFiles/TinyServer.dir/Timestamp.cpp.o: ../Timestamp.cpp
 CMakeFiles/TinyServer.dir/Timestamp.cpp.o: ../Timestamp.h
 
-CMakeFiles/TinyServer.dir/noncopyable.cpp.o: ../noncopyable.cpp
-CMakeFiles/TinyServer.dir/noncopyable.cpp.o: ../noncopyable.h
 

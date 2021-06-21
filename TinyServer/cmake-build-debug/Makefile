@@ -150,6 +150,87 @@ Acceptor.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Acceptor.cpp.s
 .PHONY : Acceptor.cpp.s
 
+Buffer.o: Buffer.cpp.o
+
+.PHONY : Buffer.o
+
+# target to build an object file
+Buffer.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Buffer.cpp.o
+.PHONY : Buffer.cpp.o
+
+Buffer.i: Buffer.cpp.i
+
+.PHONY : Buffer.i
+
+# target to preprocess a source file
+Buffer.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Buffer.cpp.i
+.PHONY : Buffer.cpp.i
+
+Buffer.s: Buffer.cpp.s
+
+.PHONY : Buffer.s
+
+# target to generate assembly for a file
+Buffer.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Buffer.cpp.s
+.PHONY : Buffer.cpp.s
+
+Callbacks.o: Callbacks.cpp.o
+
+.PHONY : Callbacks.o
+
+# target to build an object file
+Callbacks.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Callbacks.cpp.o
+.PHONY : Callbacks.cpp.o
+
+Callbacks.i: Callbacks.cpp.i
+
+.PHONY : Callbacks.i
+
+# target to preprocess a source file
+Callbacks.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Callbacks.cpp.i
+.PHONY : Callbacks.cpp.i
+
+Callbacks.s: Callbacks.cpp.s
+
+.PHONY : Callbacks.s
+
+# target to generate assembly for a file
+Callbacks.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Callbacks.cpp.s
+.PHONY : Callbacks.cpp.s
+
+Callbacks.h.o: Callbacks.h.cpp.o
+
+.PHONY : Callbacks.h.o
+
+# target to build an object file
+Callbacks.h.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Callbacks.h.cpp.o
+.PHONY : Callbacks.h.cpp.o
+
+Callbacks.h.i: Callbacks.h.cpp.i
+
+.PHONY : Callbacks.h.i
+
+# target to preprocess a source file
+Callbacks.h.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Callbacks.h.cpp.i
+.PHONY : Callbacks.h.cpp.i
+
+Callbacks.h.s: Callbacks.h.cpp.s
+
+.PHONY : Callbacks.h.s
+
+# target to generate assembly for a file
+Callbacks.h.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Callbacks.h.cpp.s
+.PHONY : Callbacks.h.cpp.s
+
 Channel.o: Channel.cpp.o
 
 .PHONY : Channel.o
@@ -393,33 +474,6 @@ Logger.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.cpp.s
 .PHONY : Logger.cpp.s
 
-Logger.h.o: Logger.h.cpp.o
-
-.PHONY : Logger.h.o
-
-# target to build an object file
-Logger.h.cpp.o:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.h.cpp.o
-.PHONY : Logger.h.cpp.o
-
-Logger.h.i: Logger.h.cpp.i
-
-.PHONY : Logger.h.i
-
-# target to preprocess a source file
-Logger.h.cpp.i:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.h.cpp.i
-.PHONY : Logger.h.cpp.i
-
-Logger.h.s: Logger.h.cpp.s
-
-.PHONY : Logger.h.s
-
-# target to generate assembly for a file
-Logger.h.cpp.s:
-	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Logger.h.cpp.s
-.PHONY : Logger.h.cpp.s
-
 Poller.o: Poller.cpp.o
 
 .PHONY : Poller.o
@@ -473,6 +527,33 @@ Socket.s: Socket.cpp.s
 Socket.cpp.s:
 	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/Socket.cpp.s
 .PHONY : Socket.cpp.s
+
+TcpConnection.o: TcpConnection.cpp.o
+
+.PHONY : TcpConnection.o
+
+# target to build an object file
+TcpConnection.cpp.o:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/TcpConnection.cpp.o
+.PHONY : TcpConnection.cpp.o
+
+TcpConnection.i: TcpConnection.cpp.i
+
+.PHONY : TcpConnection.i
+
+# target to preprocess a source file
+TcpConnection.cpp.i:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/TcpConnection.cpp.i
+.PHONY : TcpConnection.cpp.i
+
+TcpConnection.s: TcpConnection.cpp.s
+
+.PHONY : TcpConnection.s
+
+# target to generate assembly for a file
+TcpConnection.cpp.s:
+	$(MAKE) -f CMakeFiles/TinyServer.dir/build.make CMakeFiles/TinyServer.dir/TcpConnection.cpp.s
+.PHONY : TcpConnection.cpp.s
 
 TcpServer.o: TcpServer.cpp.o
 
@@ -594,6 +675,15 @@ help:
 	@echo "... Acceptor.o"
 	@echo "... Acceptor.i"
 	@echo "... Acceptor.s"
+	@echo "... Buffer.o"
+	@echo "... Buffer.i"
+	@echo "... Buffer.s"
+	@echo "... Callbacks.o"
+	@echo "... Callbacks.i"
+	@echo "... Callbacks.s"
+	@echo "... Callbacks.h.o"
+	@echo "... Callbacks.h.i"
+	@echo "... Callbacks.h.s"
 	@echo "... Channel.o"
 	@echo "... Channel.i"
 	@echo "... Channel.s"
@@ -621,15 +711,15 @@ help:
 	@echo "... Logger.o"
 	@echo "... Logger.i"
 	@echo "... Logger.s"
-	@echo "... Logger.h.o"
-	@echo "... Logger.h.i"
-	@echo "... Logger.h.s"
 	@echo "... Poller.o"
 	@echo "... Poller.i"
 	@echo "... Poller.s"
 	@echo "... Socket.o"
 	@echo "... Socket.i"
 	@echo "... Socket.s"
+	@echo "... TcpConnection.o"
+	@echo "... TcpConnection.i"
+	@echo "... TcpConnection.s"
 	@echo "... TcpServer.o"
 	@echo "... TcpServer.i"
 	@echo "... TcpServer.s"

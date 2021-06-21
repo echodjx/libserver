@@ -5,6 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/tmp/tmp.7kS45xmAmN/Acceptor.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Acceptor.cpp.o"
+  "/tmp/tmp.7kS45xmAmN/Buffer.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Buffer.cpp.o"
+  "/tmp/tmp.7kS45xmAmN/Callbacks.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Callbacks.cpp.o"
+  "/tmp/tmp.7kS45xmAmN/Callbacks.h.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Callbacks.h.cpp.o"
   "/tmp/tmp.7kS45xmAmN/Channel.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Channel.cpp.o"
   "/tmp/tmp.7kS45xmAmN/CurrentThread.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/CurrentThread.cpp.o"
   "/tmp/tmp.7kS45xmAmN/DefaultPoller.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/DefaultPoller.cpp.o"
@@ -14,9 +17,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/tmp/tmp.7kS45xmAmN/EventLoopThreadPool.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/EventLoopThreadPool.cpp.o"
   "/tmp/tmp.7kS45xmAmN/InetAddress.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/InetAddress.cpp.o"
   "/tmp/tmp.7kS45xmAmN/Logger.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Logger.cpp.o"
-  "/tmp/tmp.7kS45xmAmN/Logger.h.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Logger.h.cpp.o"
   "/tmp/tmp.7kS45xmAmN/Poller.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Poller.cpp.o"
   "/tmp/tmp.7kS45xmAmN/Socket.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Socket.cpp.o"
+  "/tmp/tmp.7kS45xmAmN/TcpConnection.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/TcpConnection.cpp.o"
   "/tmp/tmp.7kS45xmAmN/TcpServer.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/TcpServer.cpp.o"
   "/tmp/tmp.7kS45xmAmN/Thread.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Thread.cpp.o"
   "/tmp/tmp.7kS45xmAmN/Timestamp.cpp" "/tmp/tmp.7kS45xmAmN/cmake-build-debug/CMakeFiles/TinyServer.dir/Timestamp.cpp.o"

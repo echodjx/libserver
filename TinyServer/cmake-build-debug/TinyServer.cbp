@@ -88,6 +88,21 @@
 		<Unit filename="/tmp/tmp.7kS45xmAmN/Acceptor.h">
 			<Option target="TinyServer"/>
 		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/Buffer.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/Buffer.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/Callbacks.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/Callbacks.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/Callbacks.h.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/Channel.cpp">
 			<Option target="TinyServer"/>
 		</Unit>
@@ -139,9 +154,6 @@
 		<Unit filename="/tmp/tmp.7kS45xmAmN/Logger.h">
 			<Option target="TinyServer"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.7kS45xmAmN/Logger.h.cpp">
-			<Option target="TinyServer"/>
-		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/Poller.cpp">
 			<Option target="TinyServer"/>
 		</Unit>
@@ -152,6 +164,12 @@
 			<Option target="TinyServer"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/Socket.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/TcpConnection.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/TcpConnection.h">
 			<Option target="TinyServer"/>
 		</Unit>
 		<Unit filename="/tmp/tmp.7kS45xmAmN/TcpServer.cpp">
