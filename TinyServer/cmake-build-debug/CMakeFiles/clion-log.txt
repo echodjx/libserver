@@ -1,4 +1,1 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /tmp/tmp.7kS45xmAmN
--- Configuring done
--- Generating done
--- Build files have been written to: /tmp/tmp.7kS45xmAmN
+CMakeLists.txt not found in G:\文档\rep\TinyServer\TinyServer Select CMakeLists.txt file...
