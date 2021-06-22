@@ -4,6 +4,7 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <algorithm>
 //网络库底层的缓冲器类型定义
 class Buffer {
 public:
@@ -55,9 +56,51 @@ public:
         retrieve(len); //上面一句把缓冲区中可读的数据，已经读取出来，这里肯定要对缓冲区进行复位操作
         return result;
     }
+
+    void ensureWriteableBytes(size_t len) {
+        if (writableBytes() < len) {
+            makeSpace(len);//扩容
+        }
+    }
+
+    //把data data+len内存上的数据，添加到writeable缓冲区中
+    void append(const char *data, size_t len) {
+        ensureWriteableBytes(len);
+        std::copy(data, data+len, beginWrite());
+        writerIndex_ += len;
+    }
+
+    char* beginWrite() {
+        return begin() + writerIndex_;
+    }
+
+    const char* beginWrite() const {
+        return begin() + writerIndex_;
+    }
+    //从fd上读取数据
+    ssize_t readFd(int fd, int* saveErrno);
 private:
     char * begin()  {
         return &*buffer_.begin();//vector底层数据首元素的地址，也就是数组的起始地址
+    }
+    const char * begin() const {
+        return &*buffer_.begin();//vector底层数据首元素的地址，也就是数组的起始地址
+    }
+    void makeSpace(size_t len) {
+        //kCheapPrepend | reader | writer
+        //kCheapPrepend | len   |
+        if (writableBytes() + prependableBytes() < len + kCheapPrepend) {
+            buffer_.resize(writerIndex_ + len);
+        }
+        else {
+            //move readable data to the front make space inside buffer
+            size_t readable = readableBytes();
+            std::copy(begin() + readerIndex_,
+                      begin() + writerIndex_,
+                      begin() + kCheapPrepend);
+            readerIndex_ = kCheapPrepend;
+            writerIndex_ = readerIndex_ + readable;
+        }
     }
     std::vector<char> buffer_;
     size_t readerIndex_;
