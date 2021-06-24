@@ -1,19 +1,22 @@
 //
 // Created by echo-djx on 2021/6/15.
 #pragma once
+
 #include "noncopyable.h"
+
 class InetAddress;
-//封装socket fd
-class Socket : noncopyable {
+
+// 封装socket fd
+class Socket : noncopyable
+{
 public:
     explicit Socket(int sockfd)
-        : sockfd_(sockfd){
-
-    }
+            : sockfd_(sockfd)
+    {}
 
     ~Socket();
 
-    int fd() const {return sockfd_; }
+    int fd() const { return sockfd_; }
     void bindAddress(const InetAddress &localaddr);
     void listen();
     int accept(InetAddress *peeraddr);
@@ -25,5 +28,5 @@ public:
     void setReusePort(bool on);
     void setKeepAlive(bool on);
 private:
-     int sockfd_;
+    const int sockfd_;
 };

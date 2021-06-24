@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="TinyServer"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TinyServer">
+				<Option output="/tmp/tmp.7kS45xmAmN/lib/lib/libTinyServer.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 TinyServer"/>
+					<CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TinyServer/fast">
+				<Option output="/tmp/tmp.7kS45xmAmN/lib/lib/libTinyServer.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 TinyServer/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/tmp/tmp.7kS45xmAmN/lib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Acceptor.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Acceptor.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Buffer.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Buffer.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Channel.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Channel.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/CurrentThread.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/CurrentThread.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/DefaultPoller.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/EPollPoller.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/EPollPoller.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/EventLoop.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/EventLoop.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/EventLoopThread.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/EventLoopThread.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/EventLoopThreadPool.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/EventLoopThreadPool.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/InetAddress.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/InetAddress.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Logger.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Logger.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Poller.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Poller.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Socket.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Socket.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/TcpConnection.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/TcpConnection.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/TcpServer.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/TcpServer.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Thread.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Thread.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Timestamp.cpp">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/Timestamp.h">
+			<Option target="TinyServer"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.7kS45xmAmN/lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

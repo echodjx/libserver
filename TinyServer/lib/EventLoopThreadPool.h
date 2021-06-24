@@ -3,13 +3,17 @@
 //
 #pragma once
 #include "noncopyable.h"
+
 #include <functional>
 #include <string>
 #include <vector>
 #include <memory>
+
 class EventLoop;
 class EventLoopThread;
-class EventLoopThreadPool : noncopyable {
+
+class EventLoopThreadPool : noncopyable
+{
 public:
     using ThreadInitCallback = std::function<void(EventLoop*)>;
 

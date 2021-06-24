@@ -2,15 +2,19 @@
 // Created by echo-djx on 2021/6/11.
 //
 #pragma once
+
 #include "noncopyable.h"
-#include <functional>
 #include "Thread.h"
+
+#include <functional>
 #include <mutex>
 #include <condition_variable>
-#include "EventLoop.h"
 #include <string>
-#include <string.h>
-class EventLoopThread : noncopyable {
+
+class EventLoop;
+
+class EventLoopThread : noncopyable
+{
 public:
     using ThreadInitCallback = std::function<void(EventLoop*)>;
 

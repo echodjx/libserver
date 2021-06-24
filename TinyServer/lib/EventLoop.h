@@ -1,16 +1,21 @@
 #pragma once
-# include "noncopyable.h"
+
 #include <functional>
 #include <vector>
 #include <atomic>
-#include "Timestamp.h"
 #include <memory>
 #include <mutex>
+
+#include "noncopyable.h"
+#include "Timestamp.h"
 #include "CurrentThread.h"
+
 class Channel;
 class Poller;
-//时间循环类 主要包含两大模块 Channel Poller（epoll的抽象）
-class EventLoop : noncopyable{
+
+// 时间循环类  主要包含了两个大模块 Channel   Poller（epoll的抽象）
+class EventLoop : noncopyable
+{
 public:
     using Functor = std::function<void()>;
 

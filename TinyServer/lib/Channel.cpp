@@ -4,9 +4,9 @@
 
 #include <sys/epoll.h>
 
-const int Channel::kNoneEvent (0);
-const int Channel::kReadEvent (EPOLLIN | EPOLLPRI);
-const int Channel::kWriteEvent (EPOLLOUT);
+const int Channel::kNoneEvent = 0;
+const int Channel::kReadEvent = EPOLLIN | EPOLLPRI;
+const int Channel::kWriteEvent = EPOLLOUT;
 
 // EventLoop: ChannelList Poller
 Channel::Channel(EventLoop *loop, int fd)
@@ -18,7 +18,7 @@ Channel::~Channel()
 {
 }
 
-// channel的tie方法什么时候调用 一个TcpConnection新连接创建的时候 TcpConnection => Channel
+// channel的tie方法什么时候调用过？一个TcpConnection新连接创建的时候 TcpConnection => Channel
 void Channel::tie(const std::shared_ptr<void> &obj)
 {
     tie_ = obj;
@@ -32,7 +32,6 @@ void Channel::tie(const std::shared_ptr<void> &obj)
 void Channel::update()
 {
     // 通过channel所属的EventLoop，调用poller的相应方法，注册fd的events事件
-
     loop_->updateChannel(this);
 }
 
