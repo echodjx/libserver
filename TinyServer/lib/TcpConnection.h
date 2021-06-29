@@ -17,11 +17,10 @@ class Channel;
 class EventLoop;
 class Socket;
 
-/**
- * TcpServer => Acceptor => 有一个新用户连接，通过accept函数拿到connfd
- * =》 TcpConnection 设置回调 =》 Channel =》 Poller =》 Channel的回调操作
- *
- */
+
+//TcpServer => Acceptor => 有一个新用户连接，通过accept函数拿到connfd
+//=》 TcpConnection 设置回调 =》 Channel =》 Poller =》 Channel的回调操作
+
 class TcpConnection : noncopyable, public std::enable_shared_from_this<TcpConnection>
 {
 public:

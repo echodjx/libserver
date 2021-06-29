@@ -32,7 +32,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c86dd650-2b74-4893-9d9f-d30d12595a7c" name="Default Changelist" comment="" />
+    <list default="true" id="c86dd650-2b74-4893-9d9f-d30d12595a7c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Channel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Channel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Channel.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Channel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/EPollPoller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/EPollPoller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/EPollPoller.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/EPollPoller.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/TcpConnection.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/TcpConnection.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +64,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -78,9 +84,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
@@ -138,6 +144,7 @@
       <workItem from="1624230149880" duration="4929000" />
       <workItem from="1624235492667" duration="33074000" />
       <workItem from="1624417553218" duration="22828000" />
+      <workItem from="1624863205758" duration="13050000" />
     </task>
     <servers />
   </component>
