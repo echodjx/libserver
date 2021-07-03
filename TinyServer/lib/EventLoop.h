@@ -37,7 +37,7 @@ public:
     // 用来唤醒loop所在的线程的
     void wakeup();
 
-    // EventLoop的方法 =》 Poller的方法
+    // EventLoop的方法 => Poller的方法
     void updateChannel(Channel *channel);
     void removeChannel(Channel *channel);
     bool hasChannel(Channel *channel);
@@ -59,7 +59,7 @@ private:
     std::unique_ptr<Poller> poller_;
 
     int wakeupFd_; // 主要作用，当mainLoop获取一个新用户的channel，通过轮询算法选择一个subloop，通过该成员唤醒subloop处理channel
-    std::unique_ptr<Channel> wakeupChannel_;
+    std::unique_ptr<Channel> wakeupChannel_;//封装wakeupfd
 
     ChannelList activeChannels_;
 

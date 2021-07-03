@@ -78,10 +78,9 @@ void EventLoop::loop()
             channel->handleEvent(pollReturnTime_);
         }
         // 执行当前EventLoop事件循环需要处理的回调操作
-        /**
-         * IO线程 mainLoop accept fd《=channel subloop
-         * mainLoop 事先注册一个回调cb（需要subloop来执行）    wakeup subloop后，执行下面的方法，执行之前mainloop注册的cb操作
-         */
+//          IO线程 mainLoop accept fd《=channel subloop
+//          mainLoop 事先注册一个回调cb（需要subloop来执行）    wakeup subloop后，执行下面的方法，执行之前mainloop注册的cb操作
+
         doPendingFunctors();
     }
 
@@ -90,13 +89,12 @@ void EventLoop::loop()
 }
 
 // 退出事件循环  1.loop在自己的线程中调用quit  2.在非loop的线程中，调用loop的quit
-/**
- *              mainLoop
- *
- *                                             no ==================== 生产者-消费者的线程安全的队列
- *
- *  subLoop1     subLoop2     subLoop3
- */
+//               mainLoop
+//
+//      no ==================== 生产者-消费者的线程安全的队列
+//
+//   subLoop1     subLoop2     subLoop3
+
 void EventLoop::quit()
 {
     quit_ = true;
