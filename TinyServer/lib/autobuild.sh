@@ -17,15 +17,15 @@ cd `pwd`/build &&
 cd ..
 
 # 把头文件拷贝到 /usr/include/TinyServer  so库拷贝到 /usr/lib    PATH
-if [ ! -d /usr/include/TinyServer ]; then
-    mkdir /usr/include/TinyServer
+if [ ! -d /usr/include/TcpConnection ]; then
+    mkdir /usr/include/TcpConnection
 fi
 
 for header in `ls *.h`
 do
-    cp $header /usr/include/TinyServer
+    cp $header /usr/include/TcpConnection
 done
 
-cp `pwd`/lib/libTinyServer.so /usr/lib
+cp `pwd`/lib/libTcpConnection.so /usr/lib
 
 ldconfig
