@@ -33,19 +33,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c86dd650-2b74-4893-9d9f-d30d12595a7c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/http/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/http/HttpContext.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/http/HttpContext.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/http/HttpRequest.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/http/HttpRequest.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/http/HttpResponse.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/http/HttpResponse.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/http/HttpServer.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/http/HttpServer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/testserver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/example/testserver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/autobuild.sh" beforeDir="false" afterPath="$PROJECT_DIR$/lib/autobuild.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/example/TcpConnection/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/testserver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/example/TcpConnection/testserver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Buffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Buffer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Timestamp.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Timestamp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/http/HttpContext.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/http/HttpContext.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/http/HttpContext.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/http/HttpContext.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/http/HttpRequest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/http/HttpRequest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/http/HttpResponse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/http/HttpResponse.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/http/HttpResponse.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/http/HttpResponse.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/http/HttpServer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/http/HttpServer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/http/HttpServer.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/http/HttpServer.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,15 +104,11 @@
       <recent name="G:\文档\rep\TinyServer\TinyServer\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\文档\rep\TinyServer\TinyServer\example\TcpConnection" />
       <recent name="G:\文档\rep\TinyServer\TinyServer\lib" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -167,6 +162,9 @@
       <workItem from="1624863205758" duration="20545000" />
       <workItem from="1625206306200" duration="5695000" />
       <workItem from="1628144951691" duration="8267000" />
+      <workItem from="1628155744965" duration="320000" />
+      <workItem from="1628156093971" duration="3137000" />
+      <workItem from="1628680101075" duration="11358000" />
     </task>
     <servers />
   </component>

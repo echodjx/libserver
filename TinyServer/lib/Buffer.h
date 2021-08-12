@@ -6,7 +6,8 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-
+#include <cstring>
+#include <assert.h>
 // 网络库底层的缓冲器类型定义
 class Buffer
 {
@@ -54,6 +55,13 @@ public:
         }
     }
 
+    void retrieveUntil(const char* end)
+    {
+        assert(peek() <= end);
+        assert(end <= beginWrite());
+        retrieve(end - peek());
+    }
+
     void retrieveAll()
     {
         readerIndex_ = writerIndex_ = kCheapPrepend;
@@ -89,6 +97,32 @@ public:
         writerIndex_ += len;
     }
 
+    void append(const char *data)
+    {
+        append(data,strlen(data));
+    }
+
+    const char* findCRLF() const
+    {
+        // FIXME: replace with memmem()?
+        const char* crlf = std::search(peek(), beginWrite(), kCRLF, kCRLF+2);
+        return crlf == beginWrite() ? NULL : crlf;
+    }
+
+    const char* findCRLF(const char* start) const
+    {
+        assert(peek() <= start);
+        assert(start <= beginWrite());
+        // FIXME: replace with memmem()?
+        const char* crlf = std::search(start, beginWrite(), kCRLF, kCRLF+2);
+        return crlf == beginWrite() ? NULL : crlf;
+    }
+
+    void append(const std::string & str)
+    {
+        append(str.data(), str.size());
+    }
+
     char* beginWrite()
     {
         return begin() + writerIndex_;
@@ -98,6 +132,9 @@ public:
     {
         return begin() + writerIndex_;
     }
+
+
+
 
     // 从fd上读取数据
     ssize_t readFd(int fd, int* saveErrno);
@@ -133,4 +170,5 @@ private:
     std::vector<char> buffer_;
     size_t readerIndex_;
     size_t writerIndex_;
+    static const char kCRLF[];
 };
