@@ -58,6 +58,8 @@ public:
     void setCloseCallback(const CloseCallback& cb)
     { closeCallback_ = cb; }
 
+
+
     // 连接建立
     void connectEstablished();
     // 连接销毁

@@ -4,6 +4,7 @@
 #pragma once
 #include "HttpRequest.h"
 #include <TcpConnection/Timestamp.h>
+#include <string>
 class Buffer;
 
 class HttpContext

@@ -7,6 +7,7 @@
 #include <TcpConnection/Logger.h>
 #include <TcpConnection/Buffer.h>
 #include <TcpConnection/Timestamp.h>
+#include <string>
 class HttpRequest;
 class HttpResponse;
 
@@ -17,7 +18,7 @@ public:
 
     HttpServer(EventLoop* loop,
                const InetAddress& listenAddr,
-               const string& name,
+               const std::string& name,
                TcpServer::Option option = TcpServer::kNoReusePort);
 
     EventLoop* getLoop() const { return server_.getLoop(); }

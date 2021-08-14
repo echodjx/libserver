@@ -5,6 +5,7 @@
 
 #include <map>
 #include <TcpConnection/Buffer.h>
+#include <string>
 class HttpResponse
 {
 public:
