@@ -34,14 +34,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c86dd650-2b74-4893-9d9f-d30d12595a7c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/TinyServer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Any.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/TcpConnection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/TcpConnection.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/TcpConnection.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/TcpConnection.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/TcpServer.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/TcpServer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/http/HttpContext.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/http/HttpContext.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/http/HttpResponse.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/http/HttpResponse.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/http/HttpServer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/http/HttpServer.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/http/HttpServer.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/http/HttpServer.h" afterDir="false" />
     </list>
@@ -96,7 +94,7 @@
     <property name="cmake.loaded.for.project" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/http/CMakeLists.txt" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -108,12 +106,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Makefile Target.Makefile">
-    <configuration name="HttpConnection" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HttpConnection" TARGET_NAME="HttpConnection" CONFIG_NAME="Debug">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="HttpConnection" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HttpConnection" TARGET_NAME="HttpConnection" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -180,7 +178,8 @@
       <workItem from="1628680101075" duration="11358000" />
       <workItem from="1628768423401" duration="1271000" />
       <workItem from="1628822470815" duration="3039000" />
-      <workItem from="1628837691077" duration="8847000" />
+      <workItem from="1628837691077" duration="10411000" />
+      <workItem from="1629104521347" duration="22406000" />
     </task>
     <servers />
   </component>

@@ -280,3 +280,24 @@ void TcpConnection::handleError()
     }
     LOG_ERROR("TcpConnection::handleError name:%s - SO_ERROR:%d \n", name_.c_str(), err);
 }
+
+void TcpConnection::send(Buffer* buf)
+{
+    if (state_ == kConnected)
+    {
+        if (loop_->isInLoopThread())
+        {
+            sendInLoop(buf->peek(), buf->readableBytes());
+            buf->retrieveAll();
+        }
+        else
+        {
+//           void (TcpConnection::*fp)(const StringPiece& message) = &TcpConnection::sendInLoop;
+//            loop_->runInLoop(
+//                    std::bind(fp,
+//                              this,     // FIXME
+//                              buf->retrieveAllAsString()));
+            //std::forward<string>(message)));
+        }
+    }
+}

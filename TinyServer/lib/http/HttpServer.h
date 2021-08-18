@@ -15,7 +15,7 @@ class HttpServer
 {
 public:
     using HttpCallback = std::function<void (const HttpRequest&,HttpResponse*)>;
-
+    using TcpConnectionPtr = std::shared_ptr<TcpConnection>;
     HttpServer(EventLoop* loop,
                const InetAddress& listenAddr,
                const std::string& name,

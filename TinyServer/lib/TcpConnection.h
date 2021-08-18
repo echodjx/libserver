@@ -8,6 +8,7 @@
 #include "Callbacks.h"
 #include "Buffer.h"
 #include "Timestamp.h"
+#include "Any.h"
 
 #include <memory>
 #include <string>
@@ -40,6 +41,9 @@ public:
 
     // 发送数据
     void send(const std::string &buf);
+    void send(Buffer* buf);
+
+
     // 关闭连接
     void shutdown();
 
@@ -58,7 +62,8 @@ public:
     void setCloseCallback(const CloseCallback& cb)
     { closeCallback_ = cb; }
 
-
+    void setContext(Any& context)
+    { context_ = context; }
 
     // 连接建立
     void connectEstablished();
@@ -94,6 +99,8 @@ private:
     HighWaterMarkCallback highWaterMarkCallback_;
     CloseCallback closeCallback_;
     size_t highWaterMark_;
+
+    Any context_;
 
     Buffer inputBuffer_;  // 接收数据的缓冲区
     Buffer outputBuffer_; // 发送数据的缓冲区

@@ -36,8 +36,8 @@ public:
               Option option = kNoReusePort);
     ~TcpServer();
 
-    const string& ipPort() const { return ipPort_; }
-    const string& name() const { return name_; }
+    const std::string& ipPort() const { return ipPort_; }
+    const std::string& name() const { return name_; }
 
     EventLoop* getLoop() const { return loop_; }
 
