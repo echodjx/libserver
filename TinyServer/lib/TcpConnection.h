@@ -62,9 +62,11 @@ public:
     void setCloseCallback(const CloseCallback& cb)
     { closeCallback_ = cb; }
 
-    void setContext(Any& context)
+    void setContext(const any& context)
     { context_ = context; }
 
+    any* getMutableContext()
+    { return &context_; }
     // 连接建立
     void connectEstablished();
     // 连接销毁
@@ -100,7 +102,7 @@ private:
     CloseCallback closeCallback_;
     size_t highWaterMark_;
 
-    Any context_;
+    any context_;
 
     Buffer inputBuffer_;  // 接收数据的缓冲区
     Buffer outputBuffer_; // 发送数据的缓冲区
