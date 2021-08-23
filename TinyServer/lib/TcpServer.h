@@ -19,13 +19,11 @@
 #include <unordered_map>
 
 // 对外的服务器编程使用的类
-class TcpServer : noncopyable
-{
+class TcpServer : noncopyable {
 public:
-    using ThreadInitCallback = std::function<void(EventLoop*)>;
+    using ThreadInitCallback = std::function<void(EventLoop *)>;
 
-    enum Option
-    {
+    enum Option {
         kNoReusePort,
         kReusePort,
     };
@@ -34,16 +32,21 @@ public:
               const InetAddress &listenAddr,
               const std::string &nameArg,
               Option option = kNoReusePort);
+
     ~TcpServer();
 
-    const std::string& ipPort() const { return ipPort_; }
-    const std::string& name() const { return name_; }
+    const std::string &ipPort() const { return ipPort_; }
 
-    EventLoop* getLoop() const { return loop_; }
+    const std::string &name() const { return name_; }
+
+    EventLoop *getLoop() const { return loop_; }
 
     void setThreadInitcallback(const ThreadInitCallback &cb) { threadInitCallback_ = cb; }
+
     void setConnectionCallback(const ConnectionCallback &cb) { connectionCallback_ = cb; }
+
     void setMessageCallback(const MessageCallback &cb) { messageCallback_ = cb; }
+
     void setWriteCompleteCallback(const WriteCompleteCallback &cb) { writeCompleteCallback_ = cb; }
 
     // 设置底层subloop的个数
@@ -51,9 +54,12 @@ public:
 
     // 开启服务器监听
     void start();
+
 private:
     void newConnection(int sockfd, const InetAddress &peerAddr);
+
     void removeConnection(const TcpConnectionPtr &conn);
+
     void removeConnectionInLoop(const TcpConnectionPtr &conn);
 
     using ConnectionMap = std::unordered_map<std::string, TcpConnectionPtr>;
@@ -63,9 +69,9 @@ private:
     const std::string ipPort_;
     const std::string name_;
 
-    std::unique_ptr<Acceptor> acceptor_; // 运行在mainLoop，任务就是监听新连接事件
+    std::unique_ptr <Acceptor> acceptor_; // 运行在mainLoop，任务就是监听新连接事件
 
-    std::shared_ptr<EventLoopThreadPool> threadPool_; // one loop per thread
+    std::shared_ptr <EventLoopThreadPool> threadPool_; // one loop per thread
 
     ConnectionCallback connectionCallback_; // 有新连接时的回调
     MessageCallback messageCallback_; // 有读写消息时的回调

@@ -3,41 +3,28 @@
 //
 #include "HttpRequest.h"
 #include <string>
-bool HttpRequest::setMethod(const char* start, const char* end)
-{
+
+bool HttpRequest::setMethod(const char *start, const char *end) {
     std::string m(start, end);
-    if (m == "GET")
-    {
+    if (m == "GET") {
         method_ = kGet;
-    }
-    else if (m == "POST")
-    {
+    } else if (m == "POST") {
         method_ = kPost;
-    }
-    else if (m == "HEAD")
-    {
+    } else if (m == "HEAD") {
         method_ = kHead;
-    }
-    else if (m == "PUT")
-    {
+    } else if (m == "PUT") {
         method_ = kPut;
-    }
-    else if (m == "DELETE")
-    {
+    } else if (m == "DELETE") {
         method_ = kDelete;
-    }
-    else
-    {
+    } else {
         method_ = kInvalid;
     }
     return method_ != kInvalid;
 }
 
-const char* HttpRequest::methodString() const
-{
-    const char* result = "UNKNOWN";
-    switch(method_)
-    {
+const char *HttpRequest::methodString() const {
+    const char *result = "UNKNOWN";
+    switch (method_) {
         case kGet:
             result = "GET";
             break;
@@ -49,7 +36,7 @@ const char* HttpRequest::methodString() const
             break;
         case kPut:
             result = "PUT";
-             break;
+            break;
         case kDelete:
             result = "DELETE";
             break;
@@ -58,36 +45,30 @@ const char* HttpRequest::methodString() const
     }
 }
 
-void HttpRequest::addHeader(const char* start, const char* colon, const char* end)
-{
+void HttpRequest::addHeader(const char *start, const char *colon, const char *end) {
     std::string field(start, colon);
     ++colon;
-    while (colon < end && isspace(*colon))
-    {
+    while (colon < end && isspace(*colon)) {
         ++colon;
     }
     std::string value(colon, end);
-    while (!value.empty() && isspace(value[value.size()-1]))
-    {
-        value.resize(value.size()-1);
+    while (!value.empty() && isspace(value[value.size() - 1])) {
+        value.resize(value.size() - 1);
     }
     headers_[field] = value;
 }
 
-std::string HttpRequest::getHeader(const std::string& field) const
-{
+std::string HttpRequest::getHeader(const std::string &field) const {
     std::string result;
     std::map<std::string, std::string>::const_iterator it = headers_.find(field);
-    if (it != headers_.end())
-    {
+    if (it != headers_.end()) {
         result = it->second;
     }
     return result;
 }
 
 
-void HttpRequest::swap(HttpRequest& that)
-{
+void HttpRequest::swap(HttpRequest &that) {
     std::swap(method_, that.method_);
     std::swap(version_, that.version_);
     path_.swap(that.path_);

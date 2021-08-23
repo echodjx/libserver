@@ -14,23 +14,18 @@ const int kAdded = 1;
 const int kDeleted = 2;
 
 EPollPoller::EPollPoller(EventLoop *loop)
-        : Poller(loop)
-        , epollfd_(::epoll_create1(EPOLL_CLOEXEC))
-        , events_(kInitEventListSize)  // vector<epoll_event>
+        : Poller(loop), epollfd_(::epoll_create1(EPOLL_CLOEXEC)), events_(kInitEventListSize)  // vector<epoll_event>
 {
-    if (epollfd_ < 0)
-    {
+    if (epollfd_ < 0) {
         LOG_FATAL("epoll_create error:%d \n", errno);
     }
 }
 
-EPollPoller::~EPollPoller()
-{
+EPollPoller::~EPollPoller() {
     ::close(epollfd_);
 }
 
-Timestamp EPollPoller::poll(int timeoutMs, ChannelList *activeChannels)
-{
+Timestamp EPollPoller::poll(int timeoutMs, ChannelList *activeChannels) {
     // 实际上应该用LOG_DEBUG输出日志更为合理
     LOG_INFO("func=%s => fd total count:%lu \n", __FUNCTION__, channels_.size());
 
@@ -38,23 +33,16 @@ Timestamp EPollPoller::poll(int timeoutMs, ChannelList *activeChannels)
     int saveErrno = errno;
     Timestamp now(Timestamp::now());
 
-    if (numEvents > 0)
-    {
+    if (numEvents > 0) {
         LOG_INFO("%d events happened \n", numEvents);
         fillActiveChannels(numEvents, activeChannels);
-        if (numEvents == events_.size())
-        {
+        if (numEvents == events_.size()) {
             events_.resize(events_.size() * 2);
         }
-    }
-    else if (numEvents == 0)
-    {
+    } else if (numEvents == 0) {
         LOG_DEBUG("%s timeout! \n", __FUNCTION__);
-    }
-    else
-    {
-        if (saveErrno != EINTR)
-        {
+    } else {
+        if (saveErrno != EINTR) {
             errno = saveErrno;
             LOG_ERROR("EPollPoller::poll() err!");
         }
@@ -68,67 +56,55 @@ Timestamp EPollPoller::poll(int timeoutMs, ChannelList *activeChannels)
 //     ChannelList      Poller
 //                      ChannelMap  <fd, channel*>   epollfd
 
-void EPollPoller::updateChannel(Channel *channel)
-{
+void EPollPoller::updateChannel(Channel *channel) {
     const int index = channel->index();
     LOG_INFO("func=%s => fd=%d events=%d index=%d \n", __FUNCTION__, channel->fd(), channel->events(), index);
 
-    if (index == kNew || index == kDeleted)
-    {
-        if (index == kNew)
-        {
+    if (index == kNew || index == kDeleted) {
+        if (index == kNew) {
             int fd = channel->fd();
             channels_[fd] = channel;
         }
 
         channel->set_index(kAdded);
         update(EPOLL_CTL_ADD, channel);
-    }
-    else  // channel已经在poller上注册过了
+    } else  // channel已经在poller上注册过了
     {
         int fd = channel->fd();
-        if (channel->isNoneEvent())
-        {
+        if (channel->isNoneEvent()) {
             update(EPOLL_CTL_DEL, channel);
             channel->set_index(kDeleted);
-        }
-        else
-        {
+        } else {
             update(EPOLL_CTL_MOD, channel);
         }
     }
 }
 
 // 从poller中删除channel
-void EPollPoller::removeChannel(Channel *channel)
-{
+void EPollPoller::removeChannel(Channel *channel) {
     int fd = channel->fd();
     channels_.erase(fd);
 
     LOG_INFO("func=%s => fd=%d\n", __FUNCTION__, fd);
 
     int index = channel->index();
-    if (index == kAdded)
-    {
+    if (index == kAdded) {
         update(EPOLL_CTL_DEL, channel);
     }
     channel->set_index(kNew);
 }
 
 // 填写活跃的连接
-void EPollPoller::fillActiveChannels(int numEvents, ChannelList *activeChannels) const
-{
-    for (int i=0; i < numEvents; ++i)
-    {
-        Channel *channel = static_cast<Channel*>(events_[i].data.ptr);
+void EPollPoller::fillActiveChannels(int numEvents, ChannelList *activeChannels) const {
+    for (int i = 0; i < numEvents; ++i) {
+        Channel *channel = static_cast<Channel *>(events_[i].data.ptr);
         channel->set_revents(events_[i].events);
         activeChannels->push_back(channel); // EventLoop就拿到了它的poller给它返回的所有发生事件的channel列表了
     }
 }
 
 // 更新channel通道 epoll_ctl add/mod/del
-void EPollPoller::update(int operation, Channel *channel)
-{
+void EPollPoller::update(int operation, Channel *channel) {
     epoll_event event;
     bzero(&event, sizeof event);
 
@@ -138,14 +114,10 @@ void EPollPoller::update(int operation, Channel *channel)
     event.data.fd = fd;
     event.data.ptr = channel;
 
-    if (::epoll_ctl(epollfd_, operation, fd, &event) < 0)
-    {
-        if (operation == EPOLL_CTL_DEL)
-        {
+    if (::epoll_ctl(epollfd_, operation, fd, &event) < 0) {
+        if (operation == EPOLL_CTL_DEL) {
             LOG_ERROR("epoll_ctl del error:%d\n", errno);
-        }
-        else
-        {
+        } else {
             LOG_FATAL("epoll_ctl add/mod error:%d\n", errno);
         }
     }

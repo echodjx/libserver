@@ -51,8 +51,7 @@
 #endif
 
 // 定义日志的级别  INFO  ERROR  FATAL  DEBUG
-enum LogLevel
-{
+enum LogLevel {
     INFO,  // 普通信息
     ERROR, // 错误信息
     FATAL, // core信息
@@ -60,15 +59,17 @@ enum LogLevel
 };
 
 // 输出一个日志类
-class Logger : noncopyable
-{
+class Logger : noncopyable {
 public:
     // 获取日志唯一的实例对象
-    static Logger& instance();
+    static Logger &instance();
+
     // 设置日志级别
     void setLogLevel(int level);
+
     // 写日志
     void log(std::string msg);
+
 private:
     int logLevel_;
 };
