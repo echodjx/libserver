@@ -62,8 +62,9 @@ void TcpConnection::send(const std::string &buf) {
         if (loop_->isInLoopThread()) {
             sendInLoop(buf.c_str(), buf.size());
         } else {
+            void (TcpConnection::*fp)(const void *data, size_t len)= &TcpConnection::sendInLoop;
             loop_->runInLoop(std::bind(
-                    &TcpConnection::sendInLoop,
+                    fp,
                     this,
                     buf.c_str(),
                     buf.size()
@@ -129,7 +130,7 @@ void TcpConnection::sendInLoop(const void *data, size_t len) {
         }
     }
 }
-void TcpConnection::sendInLoop2(const StringPiece& message)
+void TcpConnection::sendInLoop(const StringPiece& message)
 {
     sendInLoop(message.data(), message.size());
 }
@@ -248,7 +249,7 @@ void TcpConnection::send(Buffer* buf)
         else
         {
            // void (TcpConnection::*fp)(const StringPiece& message) = &TcpConnection::sendInLoop;
-           void (TcpConnection::*fp)(const StringPiece& message) = &TcpConnection::sendInLoop2;
+           void (TcpConnection::*fp)(const StringPiece& message)= &TcpConnection::sendInLoop;
             loop_->runInLoop(
                     std::bind(fp,
                               this,     // FIXME

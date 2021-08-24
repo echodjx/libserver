@@ -92,7 +92,7 @@ private:
     void handleError();
 
     void sendInLoop(const void *message, size_t len);
-    void sendInLoop2(const StringPiece& message);
+    void sendInLoop(const StringPiece& message);
 
     void shutdownInLoop();
 

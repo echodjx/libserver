@@ -1,5 +1,5 @@
 testserver :
-	g++ -o testserver testserver.cpp -lTinyServer -lpthread -g
+	g++ -o testserver testserver.cpp -lTcpConnection -lpthread -g
 
 clean :
 	rm -f testserver

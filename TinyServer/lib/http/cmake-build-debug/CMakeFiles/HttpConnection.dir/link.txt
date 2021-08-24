@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -g -std=c++11 -fPIC -g  -shared -Wl,-soname,libHttpConnection.so -o ../lib/libHttpConnection.so CMakeFiles/HttpConnection.dir/HttpContext.cpp.o CMakeFiles/HttpConnection.dir/HttpRequest.cpp.o CMakeFiles/HttpConnection.dir/HttpResponse.cpp.o CMakeFiles/HttpConnection.dir/HttpServer.cpp.o 

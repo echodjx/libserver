@@ -7,6 +7,7 @@
 #include <sys/uio.h>
 #include <unistd.h>
 
+const char Buffer::kCRLF[] = "\r\n";
 /**
  * 从fd上读取数据  Poller工作在LT模式
  * Buffer缓冲区是有大小的！ 但是从fd上读数据的时候，却不知道tcp数据最终的大小
