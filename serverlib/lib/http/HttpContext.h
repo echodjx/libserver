@@ -22,7 +22,6 @@ public:
             : state_(kExpectRequestLine) {
     }
 
-    // return false if any error
     bool parseRequest(Buffer *buf, Timestamp receiveTime);
 
     bool gotAll() const { return state_ == kGotAll; }

@@ -1,5 +1,5 @@
 testhttpserver :
-	g++ -o testhttpserver testhttpserver.cpp  -lTcpConnection -lHttpConnection -lpthread -g
+	g++ -o httpserver_test httpserver_test.cpp  -lTcpConnection -lHttpConnection -lpthread -g
 
 clean :
-	rm -f testhttpserver
+	rm -f httpserver_test

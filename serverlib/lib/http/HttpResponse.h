@@ -30,7 +30,6 @@ public:
 
     bool closeConnection() const { return closeConnection_; }
 
-    // FIXME: replace string with StringPiece
     void addHeader(const std::string &key, const std::string &value) { headers_[key] = value; }
 
     void setContentType(const std::string &contentType) { addHeader("Content-Type", contentType); }

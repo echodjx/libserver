@@ -29,7 +29,7 @@ void onRequest(const HttpRequest &req, HttpResponse *resp) {
         resp->setStatusMessage("OK");
         resp->setContentType("text/html");
         resp->addHeader("Server", "Muduo");
-        std::string now = Timestamp::now().toFormattedString();
+        std::string now = Timestamp::now().toString();
         resp->setBody("<html><head><title>This is title</title></head>"
                       "<body><h1>Hello</h1>Now is " + now +
                       "</body></html>");

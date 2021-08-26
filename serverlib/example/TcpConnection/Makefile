@@ -1,5 +1,5 @@
 testserver :
-	g++ -o testserver testserver.cpp -lTcpConnection -lpthread -g
+	g++ -o tcpserver_test tcpserver_test.cpp -lTcpConnection -lpthread -g
 
 clean :
-	rm -f testserver
+	rm -f tcpserver_test
