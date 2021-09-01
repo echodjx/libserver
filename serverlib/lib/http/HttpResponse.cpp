@@ -9,7 +9,7 @@
 void HttpResponse::appendToBuffer(Buffer *output) const {
     char buf[32];
     snprintf(buf, sizeof buf, "HTTP/1.1 %d ", statusCode_);
-    LOG_INFO("HttpResponse=%s \n", buf);
+  //LOG_INFO("HttpResponse=%s \n", buf);
     output->append(buf);
     output->append(statusMessage_);
     output->append("\r\n");

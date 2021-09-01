@@ -43,6 +43,7 @@ const char *HttpRequest::methodString() const {
         default:
             break;
     }
+    return result;
 }
 
 void HttpRequest::addHeader(const char *start, const char *colon, const char *end) {

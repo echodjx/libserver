@@ -48,6 +48,6 @@ std::vector<EventLoop *> EventLoopThreadPool::getAllLoops() {
     if (loops_.empty()) {
         return std::vector<EventLoop *>(1, baseLoop_);
     } else {
-        loops_;
+        return  loops_;
     }
 }

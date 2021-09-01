@@ -64,8 +64,6 @@ bool HttpContext::parseRequest(Buffer *buf, Timestamp receiveTime) {
                 if (colon != crlf) {
                     request_.addHeader(buf->peek(), colon, crlf);
                 } else {
-                    // empty line, end of header
-                    // FIXME:
                     state_ = kGotAll;
                     hasMore = false;
                 }
@@ -74,7 +72,7 @@ bool HttpContext::parseRequest(Buffer *buf, Timestamp receiveTime) {
                 hasMore = false;
             }
         } else if (state_ == kExpectBody) {
-            // FIXME:
+
         }
     }
     return ok;

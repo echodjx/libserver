@@ -27,7 +27,7 @@ HttpServer::HttpServer(EventLoop *loop,
 }
 
 void HttpServer::start() {
-    LOG_INFO("HttpServer[] starts listening on %s \n", server_.name().data(), server_.ipPort().data());
+    LOG_INFO("HttpServer[%s] starts listening on %s \n", server_.name().data(), server_.ipPort().data());
     server_.start();
 }
 

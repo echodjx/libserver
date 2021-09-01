@@ -41,7 +41,7 @@ public:
 
     int events() const { return events_; }
 
-    int set_revents(int revt) { revents_ = revt; }
+    int set_revents(int revt) { revents_ = revt; return revents_;}
 
     // 设置fd相应的事件状态
     void enableReading() {
