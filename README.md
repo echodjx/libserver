@@ -1,12 +1,12 @@
 # TinyServer
 
-参考陈硕《linux多线程服务器编程》 muduo c++网络库
+参考陈硕《linux多线程服务器编程》 muduo c++网络库《linux高性能服务器编程》
 
 部分使用c++11特性来实现
 
-目前完成TcpConnection、HttpConnection外部编程接口
+目前完成TcpConnection、HttpConnection外部编程接口即example
 
-接下来准备实现一个http服务器与rpc
+接下来准备实现rpc
 
 ## 目前开发与实验机器
 
@@ -45,3 +45,27 @@ example/HttpConnection/目录下
   - 输入http://localhost:8000/hello
   - 输入http://localhost:8000/favicon.ico
 
+**MyblogServer测试**
+
+example/MyblogServer/ 目录下
+
+- 确定安装git
+  - 如无安装 
+  - centos：yum install git
+  - ubuntu：apt-get install git
+
+- 当前目录下
+
+  - chmod +x myblogtest
+
+  - ./myblogtest
+
+- 打开浏览器
+
+  - 输入 localhost:8888    // localhost可改为服务器IP
+
+  - 点击、浏览网页
+
+演示如下：
+
+![myblog](images/myblog.gif)

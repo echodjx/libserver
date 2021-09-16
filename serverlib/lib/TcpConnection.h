@@ -96,12 +96,12 @@ private:
 
     void shutdownInLoop();
 
-    EventLoop *loop_; // 这里绝对不是baseLoop， 因为TcpConnection都是在subLoop里面管理的
+    EventLoop *loop_; // TcpConnection都是在subLoop里面管理的
     const std::string name_;
     std::atomic_int state_;
     bool reading_;
 
-    // 这里和Acceptor类似   Acceptor=》mainLoop    TcpConenction=》subLoop
+    //   Acceptor=》mainLoop    TcpConenction=》subLoop
     std::unique_ptr <Socket> socket_;
     std::unique_ptr <Channel> channel_;
 

@@ -88,7 +88,7 @@ void onRequest(const HttpRequest &req, HttpResponse *resp) {
 int main() {
     int numThreads = 0;
     EventLoop loop;
-    HttpServer server(&loop, InetAddress(8888), "dummy");
+    HttpServer server(&loop, InetAddress(8888), "myblog");
     server.setHttpCallback(onRequest);
     server.setThreadNum(numThreads);
     server.start();
