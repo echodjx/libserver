@@ -51,3 +51,5 @@ service UserServiceRpc
     rpc Login(LoginRequest) returns(LoginResponse);
     rpc GetFriendLists(GetFriendListsRequest) returns(GetFriendListsResponse);
 }
+
+

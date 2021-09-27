@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include "user.pb.h"
-
+#include "rpcprovider.h"
 /*
  * userservice原来为应该本地服务，提供了两个进程内的本地方法，Login和GetFriendLists
  */
@@ -46,10 +46,11 @@ public:
 
 int main(int argc, char **argv) {
     //调用框架的初始化操作
-
+    SprcApplication::Init(argc,argv);
     //把UserService对象发布到rpc节点上
-
-    //启动一个rpc服务发布节点
-
+    RpcProvider provider;
+    provider.NotifyService(new UserService());
+    //启动一个rpc服务发布节点 run以后，进程进入阻塞状态，等待远程的rpc调用请求
+    provider.Run();
     return 0;
 }
