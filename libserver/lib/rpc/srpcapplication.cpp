@@ -5,6 +5,7 @@
 #include "srpcapplication.h"
 #include <iostream>
 #include <unistd.h>
+SrpcConfig SrpcApplication::s_config;
 void ShowArgsHelp(){
     std::cout<<"format: command -i <configfile>" <<std::endl;
 }
@@ -20,6 +21,7 @@ void SrpcApplication::Init(int argc,char **argv){
         switch (cc) {
             case 'i':
                 config_file = optarg;
+                break;
             case '?':
                 std::cout<<"invalid args!"<<std::endl;
                 ShowArgsHelp();
@@ -33,7 +35,12 @@ void SrpcApplication::Init(int argc,char **argv){
         }
     }
     //开始加载配置文件 rpcserver_ip =  prcserver_port   zookeeper_ip= zookepper_port=
+    s_config.LoadConfigFile(config_file.c_str());
 
+    std::cout << "rpcserverip:" << s_config.Load("rpcserverip") << std::endl;
+    std::cout << "rpcserverport:" << s_config.Load("rpcserverport") << std::endl;
+    std::cout << "zookeeperip:" << s_config.Load("zookeeperip") << std::endl;
+    std::cout << "zookeeperport:" << s_config.Load("zookeeperport") << std::endl;
 }
 SrpcApplication& SrpcApplication::GetInstance(){
     static  SrpcApplication app;

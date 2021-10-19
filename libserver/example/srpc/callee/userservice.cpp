@@ -4,17 +4,19 @@
 #include <iostream>
 #include <string>
 #include "user.pb.h"
-#include "rpcprovider.h"
+#include <srpc/rpcprovider.h>
+#include <srpc/srpcapplication.h>
 /*
  * userservice原来为应该本地服务，提供了两个进程内的本地方法，Login和GetFriendLists
  */
 
 
-class UserService : public fixbug::UserServiceRPC {
+class UserService : public fixbug::UserServiceRpc {
 public:
     bool Login(std::string name, std::string pwd) {
         std::cout << "doing local service:Login" << std::endl;
         std::cout << " name " << name << " pwd:" << pwd << std::endl;
+        return false;
     }
 
     /*
@@ -46,7 +48,7 @@ public:
 
 int main(int argc, char **argv) {
     //调用框架的初始化操作
-    SprcApplication::Init(argc,argv);
+    SrpcApplication::Init(argc,argv);
     //把UserService对象发布到rpc节点上
     RpcProvider provider;
     provider.NotifyService(new UserService());

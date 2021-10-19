@@ -85,7 +85,6 @@ public:
     }
 
     const char *findCRLF() const {
-        // FIXME: replace with memmem()?
         const char *crlf = std::search(peek(), beginWrite(), kCRLF, kCRLF + 2);
         return crlf == beginWrite() ? NULL : crlf;
     }
@@ -93,7 +92,6 @@ public:
     const char *findCRLF(const char *start) const {
         assert(peek() <= start);
         assert(start <= beginWrite());
-        // FIXME: replace with memmem()?
         const char *crlf = std::search(start, beginWrite(), kCRLF, kCRLF + 2);
         return crlf == beginWrite() ? NULL : crlf;
     }
