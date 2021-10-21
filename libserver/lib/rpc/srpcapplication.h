@@ -8,6 +8,7 @@ class SrpcApplication{
 public:
     static void Init(int argc,char **argv);
     static SrpcApplication& GetInstance();
+    static SrpcConfig& GetConfig();
 private:
     static SrpcConfig s_config;
 

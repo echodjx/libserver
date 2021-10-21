@@ -47,5 +47,7 @@ SrpcApplication& SrpcApplication::GetInstance(){
     return app;
 }
 
-
+SrpcConfig& SrpcApplication::GetConfig(){
+    return s_config;
+}
 

@@ -17,9 +17,10 @@ Socket::~Socket() {
 }
 
 void Socket::bindAddress(const InetAddress &localaddr) {
-  //  LOG_INFO("bind %s:%d",localaddr.toIp().c_str(),sockfd_);
-    if (0 != ::bind(sockfd_, (sockaddr *) localaddr.getSockAddr(), sizeof(sockaddr_in))) {
-        LOG_FATAL("bind sockfd:%d fail \n", sockfd_);
+  LOG_INFO("bind %s:%d",localaddr.toIp().c_str(),localaddr.toPort());
+   int x = ::bind(sockfd_, (sockaddr *) localaddr.getSockAddr(), sizeof(sockaddr_in));
+    if (0 != x) {
+        LOG_FATAL("bind sockfd:%d fail \n", errno);
     }
 }
 
