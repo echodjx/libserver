@@ -1,11 +1,11 @@
 //
 // Created by echo-djx on 2021/9/25.
 //
+#include "../user.pb.h"
 #include <iostream>
-#include <string>
-#include "user.pb.h"
 #include <srpc/rpcprovider.h>
 #include <srpc/srpcapplication.h>
+#include <string>
 /*
  * userservice原来为应该本地服务，提供了两个进程内的本地方法，Login和GetFriendLists
  */
@@ -16,7 +16,7 @@ public:
     bool Login(std::string name, std::string pwd) {
         std::cout << "doing local service:Login" << std::endl;
         std::cout << " name " << name << " pwd:" << pwd << std::endl;
-        return false;
+        return true;
     }
 
     /*
@@ -37,8 +37,8 @@ public:
 
         // 把响应写入  包括错误码、错误消息、返回值
         fixbug::ResultCode *code = response->mutable_result();
-        code->set_errcode(0);
-        code->set_errmsg("");
+        code->set_errcode(1);
+        code->set_errmsg("Login do error");
         response->set_sucess(login_result);
 
         // 执行回调操作   执行响应对象数据的序列化和网络发送（都由框架来完成）
