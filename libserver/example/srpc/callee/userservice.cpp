@@ -6,6 +6,7 @@
 #include <srpc/rpcprovider.h>
 #include <srpc/srpcapplication.h>
 #include <string>
+#include <srpc/srpccontroller.h>
 /*
  * userservice原来为应该本地服务，提供了两个进程内的本地方法，Login和GetFriendLists
  */
