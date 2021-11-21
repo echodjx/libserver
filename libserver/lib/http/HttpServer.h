@@ -5,7 +5,7 @@
 
 #include <TcpConnection/TcpServer.h>
 #include <functional>
-#include <TcpConnection/Logger.h>
+#include <TcpConnection/asylogger.h>
 #include <TcpConnection/Buffer.h>
 #include <TcpConnection/Timestamp.h>
 #include <string>

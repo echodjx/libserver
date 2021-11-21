@@ -4,23 +4,9 @@
 #include <HttpConnection/HttpServer.h>
 #include <HttpConnection/HttpRequest.h>
 #include <HttpConnection/HttpResponse.h>
-#include <TcpConnection/EventLoop.h>
-#include <TcpConnection/Logger.h>
-#include <TcpConnection/Any.h>
-#include <TcpConnection/Buffer.h>
-#include <TcpConnection/Timestamp.h>
-
-#include <sstream>
 #include <fstream>
-#include <codecvt>
-#include <iostream>
-#include <map>
-#include <locale>
 #include <sys/stat.h>
-#include <unistd.h>
-#include <string>
-#include <sys/stat.h>
-#include <locale.h>
+
 
 bool benchmark = false;
 

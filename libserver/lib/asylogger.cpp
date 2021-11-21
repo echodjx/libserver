@@ -15,14 +15,15 @@ AsyLogger::AsyLogger(){
 
             FILE *pf = fopen(file_name,"a+");
             if(pf == nullptr){
-                std::cout << "logger file:"<<file_name << "open error"<< std::end;
+                std::cout << "logger file:"<<file_name << "open error"<< std::endl;
                 exit(EXIT_FAILURE);
             }
-            std::string msg = s_lckQue.pop();
+            std::string msg = s_lckQue.Pop();
 
             char time_buf[128] = {0};
-            sprintf(time_buf, "%d-%d-%d-log.txt",nowtm->tm_hour,nowtm->tm_min,nowtm->tm_sec);
+            sprintf(time_buf, "%d:%d:%d:",nowtm->tm_hour,nowtm->tm_min,nowtm->tm_sec);
             msg.insert(0,time_buf);
+            msg.append("\n");
             fputs(msg.c_str(), pf);
             fclose(pf);
         }

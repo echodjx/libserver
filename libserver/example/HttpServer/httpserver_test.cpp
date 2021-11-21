@@ -6,11 +6,7 @@
 #include <HttpConnection/HttpServer.h>
 #include <HttpConnection/HttpRequest.h>
 #include <HttpConnection/HttpResponse.h>
-#include <TcpConnection/EventLoop.h>
-#include <TcpConnection/Logger.h>
-#include <TcpConnection/Any.h>
-#include <TcpConnection/Buffer.h>
-#include <TcpConnection/Timestamp.h>
+
 
 extern char favicon[555];
 bool benchmark = false;

@@ -1,8 +1,5 @@
 #pragma once
 
-/**
- * 用户使用muduo编写服务器程序
- */
 #include "EventLoop.h"
 #include "Acceptor.h"
 #include "InetAddress.h"

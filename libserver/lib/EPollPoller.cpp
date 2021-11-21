@@ -1,5 +1,5 @@
 #include "EPollPoller.h"
-#include "Logger.h"
+#include "asylogger.h"
 #include "Channel.h"
 
 #include <errno.h>
