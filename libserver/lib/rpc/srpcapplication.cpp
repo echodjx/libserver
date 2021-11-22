@@ -5,6 +5,7 @@
 #include "srpcapplication.h"
 #include <iostream>
 #include <unistd.h>
+#include <TcpConnection/asylogger.h>
 SrpcConfig SrpcApplication::s_config;
 void ShowArgsHelp(){
     std::cout<<"format: command -i <configfile>" <<std::endl;
@@ -36,11 +37,16 @@ void SrpcApplication::Init(int argc,char **argv){
     }
     //开始加载配置文件 rpcserver_ip =  prcserver_port   zookeeper_ip= zookepper_port=
     s_config.LoadConfigFile(config_file.c_str());
+    LOG_INFO("load configfile:");
+    LOG_INFO("rpcserverip:%s",s_config.Load("rpcserverip").c_str());
+    LOG_INFO("rpcserverport:%s",s_config.Load("rpcserverport").c_str());
+    LOG_INFO("zookeeperip:%s",s_config.Load("zookeeperip").c_str());
+    LOG_INFO("zookeeperport:%s",s_config.Load("zookeeperport").c_str());
 
-    std::cout << "rpcserverip:" << s_config.Load("rpcserverip") << std::endl;
-    std::cout << "rpcserverport:" << s_config.Load("rpcserverport") << std::endl;
-    std::cout << "zookeeperip:" << s_config.Load("zookeeperip") << std::endl;
-    std::cout << "zookeeperport:" << s_config.Load("zookeeperport") << std::endl;
+//    std::cout << "rpcserverip:" << s_config.Load("rpcserverip") << std::endl;
+//    std::cout << "rpcserverport:" << s_config.Load("rpcserverport") << std::endl;
+//    std::cout << "zookeeperip:" << s_config.Load("zookeeperip") << std::endl;
+//    std::cout << "zookeeperport:" << s_config.Load("zookeeperport") << std::endl;
 }
 SrpcApplication& SrpcApplication::GetInstance(){
     static  SrpcApplication app;

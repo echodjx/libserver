@@ -3,6 +3,7 @@
 //
 #include "rpcprovider.h"
 #include "rpcheader.pb.h"
+#include <TcpConnection/asylogger.h>
 void RpcProvider::Run() {
   std::string ip =
       SrpcApplication::GetInstance().GetConfig().Load("rpcserverip");
@@ -30,8 +31,8 @@ void RpcProvider::NotifyService(google::protobuf::Service *service) {
   //获取服务对象service的方法的数量
   int methodCnt = pserviceDesc->method_count();
 
-  std::cout << "service_name:" << service_name << std::endl;
-
+  //std::cout << "service_name:" << service_name << std::endl;
+  LOG_INFO("service_name: %s",service_name.c_str());
   ServiceInfo service_info;
 
   for(int i = 0;i < methodCnt; i++){
@@ -39,8 +40,8 @@ void RpcProvider::NotifyService(google::protobuf::Service *service) {
     const google::protobuf::MethodDescriptor* pmethodDesc = pserviceDesc->method(i);
     std::string method_name = pmethodDesc->name();
     service_info.s_methodMap.insert({method_name, pmethodDesc});
-
-    std::cout << "method_name:" << method_name << std::endl;
+    //std::cout << "method_name:" << method_name << std::endl;
+    LOG_INFO("method_name: %s",method_name.c_str());
   }
   service_info.s_service = service;
   s_serviceMap.insert({service_name,service_info});
@@ -81,24 +82,32 @@ void RpcProvider::OnMessage(const TcpConnectionPtr &conn, Buffer *buffer,Timesta
   }
   else {
     //数据头反序列化失败
-    std::cout << "rpc_header_str" << rpc_header_str << "rarse error!"<< std::endl;
+    LOG_ERROR("\"rpc_header_str: %s rarse error!",rpc_header_str.c_str());
+    //std::cout << "rpc_header_str" << rpc_header_str << "rarse error!"<< std::endl;
     return;
   }
   //获取rpc方法参数的字符流数据
   std::string args_str = recv_buf.substr(4 + header_size, args_size);
-
+  LOG_DEBUG("============================================");
   //打印调试信息
-  std::cout<<"============================================"<< std::endl;
-  std::cout<<"header_size: "<< header_size <<std::endl;
-  std::cout<<"rpc_header_str: "<< rpc_header_str <<std::endl;
-  std::cout<<"service_name"<< service_name<<std::endl;
-  std::cout<<"method_name"<< method_name<<std::endl;
-  std::cout<<"============================================"<< std::endl;
+  LOG_DEBUG("============================================");
+  LOG_DEBUG("header_size:%d",header_size);
+  LOG_DEBUG("rpc_header_str:%s",rpc_header_str.c_str());\
+  LOG_DEBUG("service_name:%s",service_name.c_str());
+  LOG_DEBUG("method_name:%s",method_name.c_str());
+  LOG_DEBUG("============================================");
+//  std::cout<<"============================================"<< std::endl;
+//  std::cout<<"header_size: "<< header_size <<std::endl;
+//  std::cout<<"rpc_header_str: "<< rpc_header_str <<std::endl;
+//  std::cout<<"service_name"<< service_name<<std::endl;
+//  std::cout<<"method_name"<< method_name<<std::endl;
+//  std::cout<<"============================================"<< std::endl;
 
   //获取service对象和method对象
   auto it = s_serviceMap.find(service_name);
   if(it == s_serviceMap.end()){
-    std::cout << service_name << "is not exist"<<std::endl;
+    LOG_ERROR("%s:is not exist",service_name.c_str());
+    //std::cout << service_name << "is not exist"<<std::endl;
     return;
   }
 
@@ -114,7 +123,8 @@ void RpcProvider::OnMessage(const TcpConnectionPtr &conn, Buffer *buffer,Timesta
   //生成rpc方法调用的请求request和响应response参数
   google::protobuf::Message *request = service->GetRequestPrototype(method).New();
   if(!request->ParseFromString(args_str)){
-    std::cout<< "request parse error!, content:"<< args_str << std::endl;
+    LOG_ERROR("request parse error!, content:%s0",args_str.c_str());
+    //std::cout<< "request parse error!, content:"<< args_str << std::endl;
     return;
   }
   google::protobuf::Message *response = service->GetResponsePrototype(method).New();
@@ -140,7 +150,8 @@ void RpcProvider::SendRpcResponse(const TcpConnectionPtr& conn, google::protobuf
     conn->shutdown(); // rpcprovider主动断开连接
   }
   else{
-    std::cout<< "serialize response_str error!"<< std::endl;
+    LOG_ERROR("serialize response_str error!");
+    //std::cout<< "serialize response_str error!"<< std::endl;
   }
   conn->shutdown();
 }

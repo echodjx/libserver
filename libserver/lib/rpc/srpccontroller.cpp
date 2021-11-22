@@ -23,6 +23,6 @@ void SrpcController::SetFailed(const std::string& reason){
   m_errText = reason;
 }
 //need to finished
-void SrpcController::StartCancal(){}
-bool SrpcController::IsCanceled(){return false;}
+void SrpcController::StartCancel(){}
+bool SrpcController::IsCanceled()const{return false;}
 void SrpcController::NotifyOnCancel(google::protobuf::Closure* callback){}

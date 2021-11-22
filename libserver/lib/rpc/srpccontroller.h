@@ -14,8 +14,8 @@ public:
   std::string ErrorText() const;
   void SetFailed(const std::string& reason);
   //need to finished
-  void StartCancal();
-  bool IsCanceled();
+  void StartCancel();
+  bool IsCanceled() const;
   void NotifyOnCancel(google::protobuf::Closure* callback);
 
 private:

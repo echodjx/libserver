@@ -3,6 +3,7 @@
 //
 #include "asylogger.h"
 #include <time.h>
+#include "Timestamp.h"
 #include <iostream>
 AsyLogger::AsyLogger(){
     //启动写日志线程
@@ -22,7 +23,7 @@ AsyLogger::AsyLogger(){
 
             char time_buf[128] = {0};
             sprintf(time_buf, "%d:%d:%d:",nowtm->tm_hour,nowtm->tm_min,nowtm->tm_sec);
-            msg.insert(0,time_buf);
+            msg.insert(0,Timestamp::now().toString()+" ");
             msg.append("\n");
             fputs(msg.c_str(), pf);
             fclose(pf);
