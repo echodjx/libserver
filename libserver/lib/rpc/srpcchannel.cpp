@@ -4,13 +4,10 @@
 
 #include "srpcchannel.h"
 #include "rpcheader.pb.h"
-#include <sys/types.h>
 #include <arpa/inet.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
 #include <unistd.h>
 #include "srpcapplication.h"
-#include "srpccontroller.h"
+#include "zookeeperutil.h"
 void SrpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
                               google::protobuf::RpcController* controller,
                               const google::protobuf::Message* request,
@@ -64,14 +61,37 @@ void SrpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
 
   //使用tcp编程，完成rpc方法的远程调用
   int clientfd = socket(AF_INET, SOCK_STREAM, 0);
-  if(-1 == clientfd){
-    std::cout<< "create socket errno:"<< errno <<std::endl;
-    exit(EXIT_FAILURE);
+  if (-1 == clientfd)
+  {
+    char errtxt[512] = {0};
+    sprintf(errtxt, "create socket error! errno:%d", errno);
+    controller->SetFailed(errtxt);
+    return;
   }
 
-  std::string ip = SrpcApplication::GetInstance().GetConfig().Load("rpcserverip");
-  uint16_t port = atoi(SrpcApplication::GetInstance().GetConfig().Load("rpcserverport").c_str());
-
+  // 读取配置文件rpcserver的信息
+  // std::string ip = MprpcApplication::GetInstance().GetConfig().Load("rpcserverip");
+  // uint16_t port = atoi(MprpcApplication::GetInstance().GetConfig().Load("rpcserverport").c_str());
+  // rpc调用方想调用service_name的method_name服务，需要查询zk上该服务所在的host信息
+  ZkClient zkCli;
+  zkCli.Start();
+  //  /UserServiceRpc/Login
+  std::string method_path = "/" + service_name + "/" + method_name;
+  // 127.0.0.1:8000
+  std::string host_data = zkCli.GetData(method_path.c_str());
+  if (host_data == "")
+  {
+    controller->SetFailed(method_path + " is not exist!");
+    return;
+  }
+  int idx = host_data.find(":");
+  if (idx == -1)
+  {
+    controller->SetFailed(method_path + " address is invalid!");
+    return;
+  }
+  std::string ip = host_data.substr(0, idx);
+  uint16_t port = atoi(host_data.substr(idx+1, host_data.size()-idx).c_str());
   struct sockaddr_in server_addr;
   server_addr.sin_family = AF_INET;
   server_addr.sin_port = htons(port);

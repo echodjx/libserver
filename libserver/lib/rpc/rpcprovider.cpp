@@ -4,6 +4,8 @@
 #include "rpcprovider.h"
 #include "rpcheader.pb.h"
 #include <TcpConnection/asylogger.h>
+#include <zookeeper/zookeeper.h>
+#include "zookeeperutil.h"
 void RpcProvider::Run() {
   std::string ip =
       SrpcApplication::GetInstance().GetConfig().Load("rpcserverip");
@@ -17,6 +19,26 @@ void RpcProvider::Run() {
                 std::placeholders::_2, std::placeholders::_3));
   //设置线程数量
   server.setThreadNum(4);
+
+  //把当前的rpc节点上要发布的服务全部注册到zk上面，让rpc client可以通过zk上发现服务
+  ZkClient zkCli;
+  zkCli.Start();
+  //server_name为永久性节点 method_name为临时性节点
+  for (auto &sp : s_serviceMap) {
+    //service_name
+    std::string service_path = "/" + sp.first;
+    std::cout<<service_path<<std::endl;
+    zkCli.Create(service_path.c_str(), nullptr, 0);
+    for (auto &mp : sp.second.s_methodMap) {
+      // service_name/method_name 存储当前这个rpc服务节点主机的ip和port
+      std::string method_path = service_path+"/" + mp.first;
+      std::cout<<method_path<<std::endl;
+      char method_path_data[128] = {0};
+      sprintf(method_path_data, "%s:%d", ip.c_str(), port);
+      //ZOO_EPHEMERAL 这个服务时临时性节点
+      zkCli.Create(method_path.c_str(), method_path_data, strlen(method_path_data), ZOO_EPHEMERAL);
+    }
+  }
 
   //启动网络服务
   server.start();

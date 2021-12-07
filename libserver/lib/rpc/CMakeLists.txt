@@ -10,8 +10,7 @@ set(SOURCE_FILES )
 
 #编译当前文件夹下的所有文件
 aux_source_directory(. SRC_LIST)
-#add_library(TinyServer SHARED  Acceptor.cpp Acceptor.h Channel.h Channel.cpp  DefaultPoller.cpp EPollPoller.h EPollPoller.cpp EventLoop.h EventLoop.cpp InetAddress.h InetAddress.cpp Logger.cpp Logger.h noncopyable.h Poller.h Poller.cpp TcpServer.cpp TcpServer.h Thread.cpp Thread.h Timestamp.cpp Timestamp.h CurrentThread.cpp CurrentThread.h EventLoopThread.cpp EventLoopThread.h EventLoopThreadPool.cpp EventLoopThreadPool.h Socket.cpp Socket.h )
 
 add_library(srpc SHARED ${SRC_LIST})
 
-target_link_libraries(srpc  protobuf TcpConnection pthread )
+target_link_libraries(srpc  protobuf TcpConnection pthread zookeeper_mt)
