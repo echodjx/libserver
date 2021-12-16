@@ -52,12 +52,13 @@ void SrpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
 
   //打印调试信息
   std::cout<<"============================================"<< std::endl;
-  std::cout<<"header_size: "<< header_size <<std::endl;
-  std::cout<<"rpc_header_str: "<< rpc_header_str <<std::endl;
-  std::cout<<"service_name"<< service_name<<std::endl;
-  std::cout<<"method_name"<< method_name<<std::endl;
-  std::cout<<"args_str:" << args_str <<std::endl;
+  std::cout << "header_size: " << header_size << std::endl;
+  std::cout << "rpc_header_str: " << rpc_header_str << std::endl;
+  std::cout << "service_name: " << service_name << std::endl;
+  std::cout << "method_name: " << method_name << std::endl;
+  std::cout << "args_str: " << args_str << std::endl;
   std::cout<<"============================================"<< std::endl;
+  //打印调试信息
 
   //使用tcp编程，完成rpc方法的远程调用
   int clientfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -99,15 +100,16 @@ void SrpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
 
   //连接rpc服务节点
   if(-1 == connect(clientfd, (struct sockaddr*)&server_addr, sizeof (server_addr))){
+    close(clientfd);
     char errtxt[512] = {0};
     sprintf(errtxt, "connect error! errno:%d",errno);
     controller->SetFailed(errtxt);
-    close(clientfd);
     return;
   }
 
   //发送rpc请求
   if(-1 == send(clientfd, send_rpc_str.c_str(), send_rpc_str.size(),0)){
+    close(clientfd);
     char errtxt[512] = {0};
     sprintf(errtxt, "send error! errno: %d",errno);
     controller->SetFailed(errtxt);
@@ -118,20 +120,20 @@ void SrpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
   char recv_buf[1024] = {0};
   int recv_size = 0;
   if(-1 == (recv_size = recv(clientfd, recv_buf, 1024, 0))){
+    close(clientfd);
     char errtxt[512] = {0};
     sprintf(errtxt, "recv error! errno: %d",errno);
     controller->SetFailed(errtxt);
-    close(clientfd);
     return;
   }
 
   //反序列化rpc调用的响应数据
 //  std::string response_str(recv_buf, 0, recv_size);
   if(!response->ParseFromArray(recv_buf, recv_size)){
+    close(clientfd);
     char errtxt[2048] = {0};
     sprintf(errtxt, "parse error! response_str: %s",recv_buf);
     controller->SetFailed(errtxt);
-    close(clientfd);
     return;
   }
   close(clientfd);

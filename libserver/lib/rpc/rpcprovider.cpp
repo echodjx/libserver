@@ -7,8 +7,7 @@
 #include <zookeeper/zookeeper.h>
 #include "zookeeperutil.h"
 void RpcProvider::Run() {
-  std::string ip =
-      SrpcApplication::GetInstance().GetConfig().Load("rpcserverip");
+  std::string ip = SrpcApplication::GetInstance().GetConfig().Load("rpcserverip");
   uint16_t port = atoi(SrpcApplication::GetInstance().GetConfig().Load("rpcserverport").c_str());
   InetAddress address(port, ip);
   //创建tcpserver对象
@@ -104,17 +103,16 @@ void RpcProvider::OnMessage(const TcpConnectionPtr &conn, Buffer *buffer,Timesta
   }
   else {
     //数据头反序列化失败
-    LOG_ERROR("\"rpc_header_str: %s rarse error!",rpc_header_str.c_str());
+    LOG_ERROR("rpc_header_str: %s rarse error!",rpc_header_str.c_str());
     //std::cout << "rpc_header_str" << rpc_header_str << "rarse error!"<< std::endl;
     return;
   }
   //获取rpc方法参数的字符流数据
   std::string args_str = recv_buf.substr(4 + header_size, args_size);
-  LOG_DEBUG("============================================");
   //打印调试信息
   LOG_DEBUG("============================================");
   LOG_DEBUG("header_size:%d",header_size);
-  LOG_DEBUG("rpc_header_str:%s",rpc_header_str.c_str());\
+  LOG_DEBUG("rpc_header_str:%s",rpc_header_str.c_str());
   LOG_DEBUG("service_name:%s",service_name.c_str());
   LOG_DEBUG("method_name:%s",method_name.c_str());
   LOG_DEBUG("============================================");
@@ -157,10 +155,8 @@ void RpcProvider::OnMessage(const TcpConnectionPtr &conn, Buffer *buffer,Timesta
                                      (this,
                                       &RpcProvider::SendRpcResponse,
                                       conn, response);
-
   //在框架上根据远端rpc请求，调用当前rpc节点上发布的方法
   service->CallMethod(method, nullptr, request, response, done);
-
 }
 
 
@@ -169,11 +165,11 @@ void RpcProvider::SendRpcResponse(const TcpConnectionPtr& conn, google::protobuf
   if(response->SerializeToString(&response_str)){//response进行序列化
     //序列化成功后，通过网络吧rpc方法执行的结果发送给会rpc的调用方
     conn->send(response_str);
-    conn->shutdown(); // rpcprovider主动断开连接
+    //conn->shutdown(); // rpcprovider主动断开连接
   }
   else{
     LOG_ERROR("serialize response_str error!");
     //std::cout<< "serialize response_str error!"<< std::endl;
   }
-  conn->shutdown();
+  conn->shutdown();//发送完成后服务方主动断开连接
 }

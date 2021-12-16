@@ -16,13 +16,13 @@ class UserService : public fixbug::UserServiceRpc {
 public:
     bool Login(std::string name, std::string pwd) {
         std::cout << "doing local service:Login" << std::endl;
-        std::cout << " name " << name << " pwd:" << pwd << std::endl;
+        std::cout << "name:" << name << " pwd:" << pwd << std::endl;
         return true;
     }
 
     bool Register(uint32_t id, std::string name, std::string pwd){
       std::cout << "doing local service: Register"<<std::endl;
-      std::cout << "id:"<< id << "name:"<<name << "pwd:"<< pwd << std::endl;
+      std::cout << "id:"<< id << " name:"<<name << " pwd:"<< pwd << std::endl;
       return true;
     }
     /*
@@ -43,7 +43,7 @@ public:
 
         // 把响应写入  包括错误码、错误消息、返回值
         fixbug::ResultCode *code = response->mutable_result();
-        code->set_errcode(1);
+        code->set_errcode(0);
         code->set_errmsg("Login do error");
         response->set_sucess(login_result);
 

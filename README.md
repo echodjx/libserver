@@ -1,4 +1,4 @@
-# TinyServer
+# libserver
 
 参考陈硕《linux多线程服务器编程》 muduo c++网络库《linux高性能服务器编程》
 

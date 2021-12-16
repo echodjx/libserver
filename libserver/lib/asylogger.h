@@ -45,6 +45,7 @@ char buf[1024] = {0}; \
 snprintf(buf, 1024, logmsgFormat, ##__VA_ARGS__); \
 logger.Log(buf); \
 } while(0)
+
 enum LogLevel{
     INFO, //普通信息
     ERROR, //错误信息
@@ -54,12 +55,15 @@ enum LogLevel{
 
 class AsyLogger{
 public:
-    AsyLogger();
     static AsyLogger& GetInstance();//日志单例
     void SetLogLevel(LogLevel level);//设置日志级别
     void Log(std::string msg);//写日志
 private:
     int s_loglevel; //记录日志级别
     LockQueue<std::string> s_lckQue;//日志缓冲队列
+
+    AsyLogger();
+    AsyLogger(const AsyLogger&) = delete;
+    AsyLogger(AsyLogger&&) = delete;
 };
 
