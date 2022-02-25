@@ -1,14 +1,12 @@
 # libserver
 
-参考陈硕《linux多线程服务器编程》 muduo c++网络库《linux高性能服务器编程》
+- 参考陈硕《linux多线程服务器编程》 muduo c++网络库《linux高性能服务器编程》
 
-部分使用c++11特性来实现
+- 目前完成TcpConnection、HttpConnection外部编程接口及example
 
-目前完成TcpConnection、HttpConnection外部编程接口及example
+- 实现rpc（同步远程过程调用）及example（Protobuf数据序列化与反序列化，ZooKeeper分布式一致性协调服务应用）
 
-实现rpc（同步远程过程调用）及example
-
-准备实现rr、random、wr、c_md5的负载均衡算法及测试
+- 准备实现rr、random、wr、c_md5的负载均衡算法及测试
 
 ## 目前开发与实验机器
 

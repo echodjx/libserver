@@ -1,3 +1,0 @@
-/tmp/tmp.Uxh1StUAaK/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/tmp/tmp.Uxh1StUAaK/cmake-build-debug/CMakeFiles/edit_cache.dir
-/tmp/tmp.Uxh1StUAaK/cmake-build-debug/CMakeFiles/srpc.dir
