@@ -4,9 +4,11 @@
 
 部分使用c++11特性来实现
 
-目前完成TcpConnection、HttpConnection外部编程接口即example
+目前完成TcpConnection、HttpConnection外部编程接口及example
 
-接下来准备实现rpc
+实现rpc（同步远程过程调用）及example
+
+准备实现rr、random、wr、c_md5的负载均衡算法及测试
 
 ## 目前开发与实验机器
 
@@ -31,19 +33,6 @@ example/TcpConnection/目录下
 - 开启另一个终端
   - telnet 127.0.0.1 8000
   - 输入一串字符  完成echo测试
-
-**HttpConnection测试**
-
-example/HttpConnection/目录下  
-
-- 开启终端
-  - make
-  - ./httpserver_test
-
-- 打开浏览器
-  - 输入http://localhost:8000/
-  - 输入http://localhost:8000/hello
-  - 输入http://localhost:8000/favicon.ico
 
 **MyblogServer测试**
 
