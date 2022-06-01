@@ -1,5 +1,8 @@
 #pragma once
 #include "BTNode.h"
-class BTNControl : BTNode {
+class BTNControl :  public BTNode {
+
+public:
+    BTNControl() = default;
 
 };

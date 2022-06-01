@@ -2,7 +2,10 @@
 #include "BTNode.h"
 
 
-class BTNRoot : BTNode{
+class BTNRoot : public BTNode{
 private:
 
+public:
+    BTNRoot() = default;
+    void Execute() override {std::cout<<"BTNParallel";};
 };

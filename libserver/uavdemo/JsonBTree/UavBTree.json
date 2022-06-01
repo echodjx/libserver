@@ -1,7 +1,70 @@
 {
-  "number": 23,
-  "string": "Hello, world!",
-  "array": [1, 2, 3, 4, 5],
-  "boolean": false,
-  "null": null
+  "name": "BTNRoot",
+  "Event": " ",
+  "CNode": [
+    {
+      "name": "BTNParallel",
+      "Event": " ",
+      "CNode": [
+        {
+          "name": "BTNSelector",
+          "Event": "PowerCheck",
+          "CNode": [
+            {
+              "name": "BTNAction",
+              "Event": "Returned"
+            },
+            {
+              "name": "BTNAction",
+              "Event": "RePortPower"
+            }
+          ]
+        },
+        {
+          "name": "BTNSelector",
+          "Event": "SelectTask",
+          "CNode": [
+            {
+              "name": "BTNAction",
+              "Event": "AreaDetection"
+            },
+            {
+               "name": "BTNSequence",
+               "Event": "FireMonitoring",
+               "CNode": [
+                 {
+                   "name": "BTNSelector",
+                   "Event": "FireTracking",
+                   "CNode" : [
+                     {
+                       "name": "BTNAction",
+                       "Event": "Returned"
+                     },
+                     {
+                       "name": "BTNAction",
+                       "Event": "FireTrace"
+                     }
+                   ]
+                 },
+                 {
+                   "name": "BTNAction",
+                   "Event": "BTNParallel",
+                   "CNode": [
+                     {
+                       "name": "BTNAction",
+                       "Event": "ImageAcq"
+                     },
+                     {
+                       "name": "BTNAction",
+                       "Event": "FireRecognition"
+                     }
+                   ]
+                 }
+               ]
+            }
+          ]
+        }
+    ]
+    }
+  ]
 }
