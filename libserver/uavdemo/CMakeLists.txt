@@ -14,9 +14,12 @@ find_package(nlohmann_json 3.10.5 REQUIRED)
 aux_source_directory(. SRC_LIST)
 aux_source_directory(./BehaviorTree SRC_LIST)
 aux_source_directory(./test SRC_LIST)
+aux_source_directory(./BTreeExecuteEngine SRC_LIST)
+
 set(CMAKE_CXX_STANDARD 11)
 
-target_link_libraries(nlohmann_json::nlohmann_json)
 
 
 add_executable(UavCooperation ${SRC_LIST})
+
+target_link_libraries(UavCooperation nlohmann_json::nlohmann_json hiredis)
