@@ -18,7 +18,7 @@
 
 ## 测试用例
 
-**TcpConnection测试**
+### TcpConnection测试
 
 example/TcpConnection/目录下  
 
@@ -29,7 +29,7 @@ example/TcpConnection/目录下
   - telnet 127.0.0.1 8000
   - 输入一串字符  完成echo测试
 
-**MyblogServer测试**
+### MyblogServer测试
 
 example/MyblogServer/ 目录下
 
@@ -53,3 +53,33 @@ example/MyblogServer/ 目录下
 演示如下：
 
 ![myblog](images/myblog.gif)
+
+### rpc测试
+
+**环境安装**
+
+- protobuf
+  - git clone https://github.com/google/protobuf
+  - unzip  protobuf-main.zip
+  - cd protobuf-main
+  - sudo apt-get install autoconf automake libtool curl 
+  - ./autogen.sh
+  - ./configure
+  - make
+  - sudo make install
+  - sudo ldconfig
+
+- 安装JDK 略
+- zookeeper
+  - https://archive.apache.org/dist/zookeeper/ 下载 zookeeper-3.4.10.tar.gz
+  - tar -zxvf zookeeper-3.4.10.tar.gz
+  - cd zookeeper-3.4.10
+  - cd conf/
+  - mv zoo_sample.cfg zoo.cfg
+  - cd ../bin
+  - ./zkServer.sh start
+  - cd src/c
+  - sudo ./configure
+  - sudo make
+  - sudo make install
+

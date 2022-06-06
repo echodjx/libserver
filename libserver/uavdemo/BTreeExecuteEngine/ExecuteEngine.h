@@ -6,11 +6,11 @@
 
 class ExecuteEngine {
 private:
-    BTNode* root;
+    BTNode *root;
 public:
-    ExecuteEngine (BTNode* root);
+    ExecuteEngine (BTNode *root);
     void ExecuteBTree();
-    
+
 };
 
 
