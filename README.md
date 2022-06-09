@@ -33,8 +33,7 @@ example/TcpConnection/目录下
 
 example/MyblogServer/ 目录下
 
-- 确定安装git
-  - 如无安装 
+- 安装git
   - centos：yum install git
   - ubuntu：apt-get install git
 
