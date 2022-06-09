@@ -22,4 +22,4 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_executable(UavCooperation ${SRC_LIST})
 
-target_link_libraries(UavCooperation nlohmann_json::nlohmann_json hiredis)
+target_link_libraries(UavCooperation nlohmann_json::nlohmann_json hiredis pthread)

@@ -16,6 +16,7 @@
 #include "../BehaviorTree/BTNRoot.h"
 #include "../BehaviorTree/BTNParallel.h"
 #include "../BehaviorTree/BTNAction.h"
+#include "../BTreeExecuteEngine/ExecuteEngine.h"
 using namespace std;
 
 using json = nlohmann::json;
@@ -158,7 +159,26 @@ void doTest()
 
 int main()
 {
-    case0();
+    ifstream ifs;
+    ifs.open("../JsonBTree/UavBTree.json");
+    std::stringstream ss;
+    if ( !ifs)
+    {
+        cout << "文件不能打开" <<endl;
+    }
+    else {
+        string str;
+        ifs>>ss.rdbuf();
+        // cout<<ss<<endl;
+    }
+    ifs.close();
+    json j2;
+    ss>>j2;
+    //cout<<j2.dump(2)<<endl;
+
+ //  case0();
     doTest();
+    ExecuteEngine engine( ToTree(j2));
+    engine.StartExecute();
     return 0;
 }

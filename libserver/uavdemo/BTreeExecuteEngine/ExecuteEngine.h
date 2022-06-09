@@ -3,14 +3,13 @@
 
 
 
-
 class ExecuteEngine {
 private:
     BTNode *root;
 public:
     ExecuteEngine (BTNode *root);
-    void ExecuteBTree();
-
+    static void ExecuteBTree(BTNode *root);
+    void StartExecute();
 };
 
 
