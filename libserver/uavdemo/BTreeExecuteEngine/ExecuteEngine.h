@@ -5,11 +5,14 @@
 
 class ExecuteEngine {
 private:
+    bool quit_;
     BTNode *root;
+    std::string name_;
 public:
-    ExecuteEngine (BTNode *root);
-    static void ExecuteBTree(BTNode *root);
+    ExecuteEngine (BTNode *root, std::string name = "uav");
+   // static void ExecuteBTree(BTNode *root,  bool &quit_);
     void StartExecute();
+    void StopExecuteEngine();
 };
 
 
