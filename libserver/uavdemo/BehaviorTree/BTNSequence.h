@@ -4,6 +4,6 @@
 
 class BTNSequence : public  BTNControl {
 public:
-    BTNSequence() = default;
-    void Execute() override {std::cout<<"BTNParallel";};
+    BTNSequence(std::string name = "");
+    void Execute() override {std::cout<<"BTNSequence"<<std::endl;};
 };

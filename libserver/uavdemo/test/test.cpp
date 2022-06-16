@@ -17,6 +17,7 @@
 #include "../BehaviorTree/BTNParallel.h"
 #include "../BehaviorTree/BTNAction.h"
 #include "../BTreeExecuteEngine/ExecuteEngine.h"
+#include <unistd.h>
 using namespace std;
 
 using json = nlohmann::json;
@@ -36,11 +37,11 @@ BTNode* CreateCNode(json j) {
             }
         }
     }
-    if(name == "BTNRoot") node = new BTNRoot();
-    else if(name == "BTNParallel") node = new BTNParallel();
-    else if(name == "BTNSelector") node = new BTNSelector();
-    else if(name == "BTNAction") node = new BTNAction();
-    else if(name == "BTNSequence") node = new BTNSequence();
+    if(name == "BTNRoot") node = new BTNRoot(name);
+    else if(name == "BTNParallel") node = new BTNParallel(name);
+    else if(name == "BTNSelector") node = new BTNSelector(name);
+    else if(name == "BTNAction") node = new BTNAction(name);
+    else if(name == "BTNSequence") node = new BTNSequence(name);
     node->SetName(name);
     for(auto &tmp : CNode) {
         node->AddCNode(tmp);
@@ -169,16 +170,21 @@ int main()
     else {
         string str;
         ifs>>ss.rdbuf();
-        // cout<<ss<<endl;
     }
     ifs.close();
     json j2;
     ss>>j2;
-    //cout<<j2.dump(2)<<endl;
 
  //  case0();
-    doTest();
-    ExecuteEngine engine( ToTree(j2));
+ //  doTest();
+    ExecuteEngine engine( ToTree(j2), "uav1");
+  //  ExecuteEngine engine2( ToTree(j2));
     engine.StartExecute();
+  //  engine2.StartExecute();
+
+  //  engine2.StopExecuteEngine();
+    sleep(15);
+    engine.StopExecuteEngine();
+    sleep(5);
     return 0;
 }

@@ -12,6 +12,6 @@ private:
     };
 
 public:
-    BTNAction() = default;
-    void Execute() override {};
+    BTNAction(std::string name = "");
+    void Execute() override {std::cout<<"BTNAction"<<std::endl;};
 };

@@ -3,6 +3,6 @@
 class BTNControl :  public BTNode {
 
 public:
-    BTNControl() = default;
+    BTNControl(std::string name = "");
 
 };

@@ -10,12 +10,13 @@ private:
         kBlocking,//阻塞
         kEnded,//结束
     };
-    std::vector<BTNode*> CNode_; //子节点
-    std::string name;
+
+    std::string name_;
 public:
-    BTNode () = default;
+    std::vector<BTNode*> CNode_; //子节点
+    BTNode (std::string name = "");
     virtual void Execute() = 0; //执行
-    void SetName(std::string str) {name = str;}
+    void SetName(std::string str) {name_ = str;}
     void AddCNode(BTNode *node) {
         CNode_.emplace_back(node);
     }

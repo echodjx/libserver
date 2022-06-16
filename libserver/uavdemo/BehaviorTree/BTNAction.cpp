@@ -3,3 +3,9 @@
 //
 
 #include "BTNAction.h"
+
+
+
+BTNAction::BTNAction(std::string name): BTNode(name) {
+
+}

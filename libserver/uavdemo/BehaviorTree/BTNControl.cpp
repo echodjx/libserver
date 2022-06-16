@@ -3,3 +3,9 @@
 //
 
 #include "BTNControl.h"
+
+
+
+BTNControl::BTNControl(std::string name): BTNode(name){
+
+}

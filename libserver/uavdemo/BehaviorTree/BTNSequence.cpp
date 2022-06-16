@@ -3,3 +3,9 @@
 //
 
 #include "BTNSequence.h"
+
+
+
+BTNSequence::BTNSequence(std::string name): BTNControl(name) {
+
+}

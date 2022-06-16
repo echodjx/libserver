@@ -6,6 +6,6 @@ private:
     BTNAction* Select(); //根据条件选择执行的节点
 
 public:
-    BTNSelector() = default;
-    void Execute() override {std::cout<<"BTNParallel";};
+    BTNSelector(std::string name = "");
+    void Execute() override {std::cout<<"BTNSelector"<<std::endl;};
 };
